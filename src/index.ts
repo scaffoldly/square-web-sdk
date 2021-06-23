@@ -4,20 +4,20 @@
  */
 
 import '../square';
-import { Square } from '../square';
+import { __Square } from '../square';
 
 export const SQUARE_JS_URL_SANDBOX = 'https://sandbox.web.squarecdn.com/v1/square.js';
 
 export const SQUARE_JS_URL_PRODUCTION = 'https://web.squarecdn.com/v1/square.js';
 
-export type { Square };
+export { __Square };
 
-let squarePromise: Promise<Square> | undefined;
+let squarePromise: Promise<typeof __Square> | undefined;
 
 // square injected
-declare const Square: Square;
+declare const Square: typeof __Square;
 
-export function loadSquare(sandbox: boolean): Promise<Square> {
+export function loadSquare(sandbox: boolean): Promise<typeof __Square> {
   if (!squarePromise) {
     squarePromise = new Promise((resolve, reject) => {
       const script = document.createElement('script');

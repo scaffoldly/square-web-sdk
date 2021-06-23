@@ -16,14 +16,15 @@ yarn add square-web-sdk
 ## Usage
 
 ```typescript
-import { loadSquare } from 'square-web-sdk';
+import { loadSquare, __Square } from 'square-web-sdk';
 
 async function usageExample() {
     const Square = await loadSquare(false /* use sandbox */);
 
-    const payments = Square.payments();
-    const card = await payments.card();
+    const payments = Square.payments('applicationId', 'locationId');
+    const card: __Square.Card = await payments.card();
     await card.attach('#card');
+
     const token = await card.tokenize();
 }
 ```
