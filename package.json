@@ -1,0 +1,62 @@
+{
+  "name": "square-web-sdk",
+  "version": "0.1.0",
+  "author": "acrazing <joking.young@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acrazing/square-web-sdk.git"
+  },
+  "homepage": "https://github.com/acrazing/square-web-sdk",
+  "dependencies": {},
+  "files": [
+    "lib",
+    "square.d.ts"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "generate": "node scripts/generate_types_definition.js",
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "axios": "^0.21.1",
+    "dpdm": "^3.6.0",
+    "fs-extra": "^10.0.0",
+    "git-branch-is": "^4.0.0",
+    "html5parser": "^2.0.2",
+    "husky": "^4.2.5",
+    "json-to-ts": "^1.7.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.2.0",
+    "prettier-plugin-organize-imports": "^1.1.1",
+    "typescript": "^4.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "git -c core.whitespace=-space-before-tab,-trailing-space --no-pager diff --cached --check && lint-staged",
+      "pre-push": "git-branch-is -r \"^(feature|bugfix)-([0-9a-z.-]+)$|^master$\""
+    }
+  },
+  "lint-staged": {
+    "*.{md,ts,tsx,js,jsx,css,less,scss,html,json,yaml}": "prettier --write"
+  },
+  "description": "An unofficial npm package for [Square Web Payments SDK](https://developer.squareup.com/reference/sdks/web/payments), with TypeScript types definition.",
+  "bugs": {
+    "url": "https://github.com/acrazing/square-web-sdk/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "square",
+    "web",
+    "payments",
+    "SDK",
+    "typescript"
+  ],
+  "license": "MIT"
+}

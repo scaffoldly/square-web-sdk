@@ -1,0 +1,14 @@
+/node_modules
+/.pnp
+.pnp.js
+/coverage
+/build
+.DS_Store
+*.local
+*.log
+.idea/
+Boarding_Desktop_Release/
+/lib/
+.cache/
+temp/
+/report.*

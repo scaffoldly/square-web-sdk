@@ -1,0 +1,5940 @@
+{
+  "n": "Web Payments SDK",
+  "m": {},
+  "s": "payments",
+  "v": "0.0.0",
+  "ent": [
+    {
+      "n": "PlaidMissingNameError",
+      "ex": [
+        {
+          "c": "try {\n  const result = await ach.tokenize();\n  if (result.status == \"OK\") {\n     alert (`Transfer success ${result.token}` )\n  }\n}\ncatch (e) {\n  if (e instanceof PlaidMissingNameError) {\n     alert(`Account holder name is missing ${e.message}`);\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Thrown when `accountHolderName` is not provided to the ACH payment tokenize\nmethod",
+      "d": "The bank account holder name must be provided in the parameters of\n`ach.tokenize({ accountHolderName: string });`",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PlaidUninitializedError",
+      "ex": [
+        {
+          "c": "try {\n  const result = await ach.tokenize();\n  if (result.status == \"OK\") {\n     alert (`Transfer success ${result.token}` )\n  }\n}\ncatch (e) {\n  if (e instanceof PlaidUninitializedError) {\n     alert(`Plaid was not correctly initialized ${e.message}`);\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Thrown when the `ach` payment method was not initialized.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "VerifyBuyerError",
+      "s": "Strong customer authentication error",
+      "d": "Thrown with an exception on the verifyBuyer method\n",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ElementNotFoundError",
+      "s": "The specified element was not found",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidEventListenerCallbackError",
+      "s": "An `eventListener callback` is throwing an unexpected error.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidOptionError",
+      "s": "Invalid method parameter errors.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidPaymentRequestError",
+      "s": "A `PaymentRequest` object is malformed",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidPaymentRequestUpdateError",
+      "s": "A `PaymentRequestUpdate` object is malformed.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidConfigurationPropertyError",
+      "s": "The specified option name does not exist",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidConfigurationValueError",
+      "s": "The specified option has an invalid value",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidFieldNameError",
+      "s": "The specified field name is invalid",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "BrowserNotSupportedError",
+      "s": "The hosting client browser is not supported by the Web Payments SDK",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "WebSdkEmbedError",
+      "s": "The Web Payments SDK requires HTTPS",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidElementPresentError",
+      "ex": [
+        {
+          "c": "try {\n  payments.googlePay(paymentReq);\n}\ncatch(e) {\n  alert(`Google Pay could not be initiated due to: ${e.name} ${e.message}`);\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The developer has an element with a forbidden/clashing ID on the page.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidElementTypeError",
+      "ex": [
+        {
+          "c": "try {\n  const result = await card.attach('input');\n}\ncatch(e) {\n  alert(`Card not attached: ${e.name} ${e.message}`);\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The developer attempted to attach a payment method with an invalid selector or element type.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentMethodAlreadyAttachedError",
+      "ex": [
+        {
+          "c": "try {\n    await card.attach('#card');\n    await card.attach('#card');\n}\ncatch (e) {\n   if (e instanceof PaymentMethodAlreadyAttachedError){\n      alert(\"The Card payment method is already attached to the page\");\n   }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Exception thrown when a Payment Method instance is attached more than once.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentMethodAlreadyDestroyedError",
+      "ex": [
+        {
+          "c": "try {\n    await card.destroy();\n    await card.attach('#card');\n}\ncatch (e) {\n   if (e instanceof PaymentMethodAlreadyDestroyedError){\n      alert(\"The Card payment method has been destroyed\");\n   }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Exception thrown when a Payment Method instance is already destroyed.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentMethodNotAttachedError",
+      "ex": [
+        {
+          "c": "try {\n  card.addEventListener(\"cardBrandChanged\",  async (cardInputEvent) => {\n    alert(`Card brand changed to ${cardInputEvent.cardBrand}`);\n  });\n}\ncatch (e) {\n  if (e instanceof PaymentMethodNotAttachedError){\n     alert(\"The Card payment method has not been attached to the page\");\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "A method was called on a payment method before it is attached\nto a page HTML DOM element.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentMethodUnsupportedError",
+      "ex": [
+        {
+          "c": "try {\n  const applePay = await payments.applePay(paymentRequest);;\n}\ncatch (e) {\n  if (e instanceof PaymentMethodUnsupportedError){\n     alert(\"Apple Pay is not supported in this browser\");\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The payment method is not supported, and cannot be used.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ScriptLoaderError",
+      "s": "Thrown when a script tag injecting a global fails to load the global.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidInputStylePropertyError",
+      "s": "A provided style property is invalid for the payment method.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidInputStyleSelectorError",
+      "s": "A provided style selector is invalid or unsupported.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidInputStyleValueError",
+      "s": "A provided style value is invalid for the property.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "InvalidStylesError",
+      "s": "An aggregated set of style class errors including all of the issues\nrelated to styles provided by an application.",
+      "k": "c",
+      "p": [
+        {
+          "n": "errors",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "InvalidInputStyleValueError"
+                },
+                {
+                  "pT": "o",
+                  "ent": "InvalidInputStylePropertyError"
+                },
+                {
+                  "pT": "o",
+                  "ent": "InvalidInputStyleSelectorError"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "TokenizationError",
+      "k": "c",
+      "p": [
+        {
+          "n": "errors",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "ApplicationError"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ApplicationError",
+      "s": "Details object of an error that occurred throughout the Web Payment SDK.",
+      "k": "i",
+      "p": [
+        {
+          "n": "detail",
+          "s": "Additional detail about the error, if applicable.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "field",
+          "s": "Particular field that caused the error, if applicable. E.g. Card Number",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "message",
+          "s": "Error message.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "type",
+          "s": "Type of error thrown.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "SquareApiError",
+      "s": "Square API Error Format.",
+      "k": "i",
+      "p": [
+        {
+          "n": "category",
+          "s": "Indicates which high-level category of error has occurred during a request to the Connect API.\nhttps://developer.squareup.com/reference/square/enums/ErrorCategory",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "ErrorCategory",
+                "ext": true,
+                "k": "c"
+              }
+            }
+          ]
+        },
+        {
+          "n": "code",
+          "s": " Indicates the specific error that occurred during a request to a Square API.\n https://developer.squareup.com/reference/square/enums/ErrorCode",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "detail",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "field",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "VerifyBuyerErrorDetails",
+      "s": "Format of error details returned from verifyBuyer",
+      "k": "i",
+      "p": [
+        {
+          "n": "code",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "type",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "UnexpectedError",
+      "ex": [
+        {
+          "c": "try {\n  const result = await ach.tokenize();\n  if (result.status == \"OK\") {\n    alert (`Transfer success ${result.token}` )\n  }\n}\ncatch (e) {\n  if (e instanceof UnexpectedError) {\n    alert(`The SDK had an unknown error ${e.message}`);\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "A generic error to handle internal error conditions unrelated to the state or\nof the application that is integrating the Web Payments SDK.",
+      "k": "c",
+      "p": [
+        {
+          "n": "message",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "name",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "stack",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "Contact",
+      "ex": [
+        {
+          "c": "const buyer = {\n   \"givenName\": \"John\",\n   \"familyName\": \"Doe\",\n   \"addressLines\": [\n      \"123 East Main Street\",\n      \"#111\"\n   ],\n   \"city\": \"Seattle\",\n   \"state\": \"WA\",\n   \"postalCode\": \"98111\",\n   \"countryCode\": \"USA\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "A buyer",
+      "d": "The `Contact` includes contact information about the buyer.",
+      "k": "i",
+      "p": [
+        {
+          "n": "addressLines",
+          "s": "Street address lines.",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "s"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "city",
+          "s": "City/locality name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "countryCode",
+          "s": "Two-letter ISO 3166-1 country code.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "familyName",
+          "s": "Last/family name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "givenName",
+          "s": "First/given name.",
+          "d": "For mononyms and other such names, provide the full name as `givenName`.\n",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "postalCode",
+          "s": "Postal code.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "state",
+          "s": "State/province/region name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ShippingContact",
+      "ex": [
+        {
+          "c": "const buyer = {\n   \"givenName\": \"John\",\n   \"familyName\": \"Doe\",\n   \"addressLines\": [\n      \"123 East Main Street\",\n      \"#111\"\n   ],\n   \"city\": \"Seattle\",\n   \"state\": \"WA\",\n   \"postalCode\": \"98111\",\n   \"countryCode\": \"USA\",\n   \"email\": \"johndoe@example.com\",\n   \"phone\": \"+12065551212\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "A digital wallet shipping contact",
+      "d": "`ShippingContact` contains name, address, email, and contact phone information\nto be shown in a digital wallet payment form.",
+      "k": "i",
+      "p": [
+        {
+          "n": "addressLines",
+          "s": "Street address lines.",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "s"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "city",
+          "s": "City/locality name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "countryCode",
+          "s": "Two-letter ISO 3166-1 country code.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "email",
+          "s": "Email address.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "familyName",
+          "s": "Last/family name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "givenName",
+          "s": "First/given name.",
+          "d": "For mononyms and other such names, provide the full name as `givenName`.\n",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "phone",
+          "s": "Telephone number.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "postalCode",
+          "s": "Postal code.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "state",
+          "s": "State/province/region name.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PublicErrors",
+      "s": "The errors that can be thrown by the Web Payments SDK",
+      "d": "`PublicErrors` contains all of the error types that are thrown by the SDK.\n",
+      "k": "i",
+      "p": [
+        {
+          "n": "BrowserNotSupportedError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "BrowserNotSupportedError"
+            }
+          ]
+        },
+        {
+          "n": "ElementNotFoundError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ElementNotFoundError"
+            }
+          ]
+        },
+        {
+          "n": "InvalidEventListenerCallbackError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "InvalidEventListenerCallbackError"
+            }
+          ]
+        },
+        {
+          "n": "InvalidOptionError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "InvalidOptionError"
+            }
+          ]
+        },
+        {
+          "n": "InvalidPaymentRequestError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "InvalidPaymentRequestError"
+            }
+          ]
+        },
+        {
+          "n": "InvalidPaymentRequestUpdateError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "InvalidPaymentRequestUpdateError"
+            }
+          ]
+        },
+        {
+          "n": "PaymentMethodUnsupportedError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "PaymentMethodUnsupportedError"
+            }
+          ]
+        },
+        {
+          "n": "PlaidMissingNameError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "PlaidMissingNameError"
+            }
+          ]
+        },
+        {
+          "n": "PlaidUninitializedError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "PlaidUninitializedError"
+            }
+          ]
+        },
+        {
+          "n": "ScriptLoaderError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ScriptLoaderError"
+            }
+          ]
+        },
+        {
+          "n": "TokenizationError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "TokenizationError"
+            }
+          ]
+        },
+        {
+          "n": "UnexpectedError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "VerifyBuyerError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "VerifyBuyerError"
+            }
+          ]
+        },
+        {
+          "n": "WebSdkEmbedError",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "WebSdkEmbedError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Window",
+      "k": "i",
+      "p": [
+        {
+          "n": "Square",
+          "ex": [
+            {
+              "c": "<script type=\"text/javascript\" src=\"https://sandbox.web.squarecdn.com/v1/square.js\"></script>\n<script>\n  if (window.Square) {\n    const payments = Square.payments(applicationId, locationId);\n  }\n</script>",
+              "l": "javascript"
+            }
+          ],
+          "s": "The Web Payment SDK library adds a `Square` object to the browser's global window object under the property name `Square`;",
+          "t": [],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "Money",
+      "ex": [
+        {
+          "c": "const paymentAmount = {\n   \"amount\": 1.00,\n   \"currencyCode\": \"USD\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Interface for handling any currency",
+      "k": "i",
+      "p": [
+        {
+          "n": "amount",
+          "t": [
+            {
+              "pT": "n"
+            }
+          ]
+        },
+        {
+          "n": "currencyCode",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "GBP"
+            },
+            {
+              "pT": "s",
+              "pV": "USD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "ACH",
+      "ex": [
+        {
+          "c": "const ach = await payments.ach()\n\nconst achButton = document.getElementById('ach-button')\nconst buyerNameField = document.getElementById('buyer-name-field');\nachButton.onclick = () => {\n  try {\n    const result = ach.tokenize({ accountHolderName: buyerNameField.value });\n    // Process payment with result.token\n  }\n  catch (e) {\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The ACH Payment Method",
+      "d": "Initiate ACH transfers by allowing the buyer to choose their bank and enter\ntheir bank credentials in a Plaid form.\n",
+      "k": "i",
+      "m": [
+        {
+          "n": "addEventListener",
+          "ex": [
+            {
+              "c": "const callback = async (metadata) => {\n  alert(`Buyer searched for an institution using query ${metadata.institution_search_query}`);\n};\nach.addEventListener(\"SEARCH_INSTITUTION\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Adds an event listener to the instance of ach.\nSee the Plaid documentation for supported event types and expected metadata.\nhttps://plaid.com/docs/#onevent-callback",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The Plaid event type to listen for",
+              "t": [
+                {
+                  "pT": "s"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "destroy",
+          "ex": [
+            {
+              "c": "await ach.destroy();",
+              "l": "javascript"
+            }
+          ],
+          "s": "Destroys the ACH payment method. The attached element is emptied and all event listeners are removed.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "A promise which resolves when the ACH instance is destroyed"
+        },
+        {
+          "n": "removeEventListener",
+          "ex": [
+            {
+              "c": "ach.removeEventListener(\"SEARCH_INSTITUTION\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Removes an event listener from the instance of ach.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The Plaid event type to stop listening for",
+              "t": [
+                {
+                  "pT": "s"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "tokenize",
+          "ex": [
+            {
+              "c": "const achButton = document.getElementById('ach-button')\nconst buyerNameField = document.getElementById('buyer-name-field');\nachButton.onclick = () => {\n  try {\n    const result = await ach.tokenize({\n      accountHolderName: 'Bryce'\n    });\n\n    if (result.status === \"OK\") {\n       alert (`Tokenization succeeded: ${result.token}.` )\n    }\n\n    if (result.status === \"CANCEL\") {\n       alert(`The buyer abandoned the tokenization flow.`);\n    }\n  }\n  catch (e){\n    // Something went wrong\n    alert(`${e.name} ${e.message}`);\n  }\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "Trigger the ACH authentication flow.\nUse the token returned to process the payment on your server.\nNote: If the buyer cancels by closing the Plaid window without completing the\ntransaction, an exception is thrown.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenResult"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "AchTokenOptions"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "The plaid handler was not initialized correctly",
+              "e": "PlaidUninitializedError"
+            },
+            {
+              "d": "`{ accountHolderName: string }` is a required parameter",
+              "e": "PlaidMissingNameError"
+            },
+            {
+              "d": "The bank transfer request could not be tokenized",
+              "e": "TokenizationError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "AchTokenOptions",
+      "ex": [
+        {
+          "c": "const achPaymentOptions = {\n   \"accountHolderName\": \"John Doe\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Defines an ACH payment options object",
+      "k": "i",
+      "p": [
+        {
+          "n": "accountHolderName",
+          "s": "Given name and surname of the bank account holder",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "TokenResult",
+      "s": "The result of a request to tokenize a payment card",
+      "d": "The `TokenResult` carries the status of the request, resulting token, any\nerrors, and details about the payment card used.\n",
+      "k": "i",
+      "p": [
+        {
+          "n": "details",
+          "s": "Additional details about the token.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "TokenDetails"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "errors",
+          "s": "Errors that occurred while attempting to tokenize.",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenErrorDetails"
+                },
+                {
+                  "pT": "o",
+                  "ent": {
+                    "n": "Error",
+                    "ext": true,
+                    "k": "c"
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "status",
+          "s": "Indicates whether the tokenization request was successful.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "TokenStatus"
+            }
+          ]
+        },
+        {
+          "n": "token",
+          "s": "Payment token representing tokenized payment information; for use with\nrelevant Square APIs and buyer verification.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "TokenDetails",
+      "ex": [
+        {
+          "c": "try {\n  const result = await card.tokenize();\n  alert(`Payment for  ${result.details.card.brand},\n    number ${result.details.card.last4}\n    expiration year ${result.details.card.expYear} was processed`);\n} catch (e) {\n    e.errorList.forEach(err => {\n      const li = document.createElement('li');\n      li.innerText = err.message;\n      document.querySelector('#errors').appendChild(li);\n    });\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Details about the payment card used to create a payment token",
+      "d": "`TokenDetails` provides the payment card information needed to match a token\nreturned by the SDK with payment card information input by a buyer.",
+      "k": "i",
+      "p": [
+        {
+          "n": "bankAccount",
+          "s": "Additional information about a tokenized bank account.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "AchBankAccountDetails"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "card",
+          "s": "Additional information about a tokenized card.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardDetails"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "giftCard",
+          "s": "Additional information about a tokenized gift card.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "GiftCardDetails"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "method",
+          "s": "Identifies the payment method that created the token.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "MethodType"
+            }
+          ]
+        },
+        {
+          "n": "shipping",
+          "s": "Additional information about shipping.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ShippingDetails"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "AchBankAccountDetails",
+      "s": "Identifying details of a tokenized bank account",
+      "d": "This object is returned with ACH payment tokens.\nThe `AchBankAccountDetails` object provides enough bank account information\nto confirm the bank account used in a purchase. Only the last three digits\nof the bank account number are provided.\n",
+      "k": "i",
+      "p": [
+        {
+          "n": "accountNumberSuffix",
+          "s": "The last three digits of the bank account number.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "accountType",
+          "s": "The type of bank account. For example: 'Checking', 'Savings', etc.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "bankName",
+          "s": "The name of the bank where the account is held.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "CardDetails",
+      "s": "Identifying details of a processed payment card",
+      "d": "This object is returned with a successful card payment.\nThe `CardDetails` object provides enough payment card\ndetail to confirm the card used in a purchase but only provides\nthe last four digits of the card number to maintain security.\n",
+      "k": "i",
+      "p": [
+        {
+          "n": "billing",
+          "s": "Cardholder billing information.",
+          "d": "The information available depends on the payment method used, and on\nspecific circumstances of the payment method.\n\n**For the [[Card]] payment method:**\n\n_These rules are mostly made up, but directional. Will need some work to hone\nthe complexity here._\n\n- If no billing information is given during tokenization, and the `postalCode`\nfield was not used, no billing information will be returned.\n\n- If no billing information is given during tokenization, and the `postalCode`\nfield was used, only the `postalCode` field will be returned.\n\n- If billing information is given during tokenization, it will be returned\nhere. However, the `postalCode` field will have the most recent value.\n",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "Contact"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "brand",
+          "s": "The card brand.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "CardBrand"
+            }
+          ]
+        },
+        {
+          "n": "cardType",
+          "s": "The card type.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "CardType"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "expMonth",
+          "s": "One- or two-digit month of the card expiration date.",
+          "t": [
+            {
+              "pT": "n"
+            }
+          ]
+        },
+        {
+          "n": "expYear",
+          "s": "Four-digit year of the card expiration date.",
+          "t": [
+            {
+              "pT": "n"
+            }
+          ]
+        },
+        {
+          "n": "last4",
+          "s": "The fast four digits of the card number.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "prepaidType",
+          "s": "The prepaid card type.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "PrepaidType"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "GiftCardDetails",
+      "ex": [
+        {
+          "c": "{\n \"type\": \"Gift\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "GiftCard details interface",
+      "d": "Declares the shape of an object that provides the details of a giftCard .",
+      "k": "i",
+      "p": [
+        {
+          "n": "type",
+          "s": "The Gift Cards type.",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "GiftCardType"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "ShippingDetails",
+      "ex": [
+        {
+          "c": "const shippingDetails = {\n  \"contact\": {\"givenName\": \"John\",\n     \"familyName\": \"Doe\",\n     \"addressLines\": [\n        \"123 East Main Street\",\n        \"#111\"\n     ],\n     \"city\": \"Seattle\",\n     \"state\": \"WA\",\n     \"postalCode\": \"98111\",\n     \"countryCode\": \"USA\",\n     \"email\": \"johndoe@example.com\",\n     \"phone\": \"+12065551212\"\n  },\n  \"option\": {\n    \"amount\": \"1.00\",\n    \"id\": \"1\",\n    \"label\": \"UPS Ground\"\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Digital wallet shipping contact information and the shipping options",
+      "d": "The shipping contact information and the product shipping options that are\noffered to a buyer in a digital payment method such as Apple Pay or Google Pay",
+      "k": "i",
+      "p": [
+        {
+          "n": "contact",
+          "s": "The shipping contact information for the token.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ShippingContact"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "option",
+          "s": "The shipping option for the token.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ShippingOption"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ShippingOption",
+      "ex": [
+        {
+          "c": "const shippingOption1 = {\n   \"amount\": \"1.00\",\n   \"id\": \"1\",\n   \"label\": \"UPS Ground\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Digital Wallet shipping option choice",
+      "d": "The object used to set a product shipping option choice for the\nbuyer in a digital wallet payment such as Apple Pay or Google Pay",
+      "k": "i",
+      "p": [
+        {
+          "n": "amount",
+          "s": "The amount of this shipping option.",
+          "d": "Given as a string representation of a float with two decimal places\n(e.g., `\"15.00\"`).\n\nUse `\"0.00\"` to indicate free or no cost.\n",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "id",
+          "s": "A unique ID to reference the shipping option.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "label",
+          "s": "A short description of this shipping option.",
+          "d": "Displayed in the Apple Pay and Google Pay payment sheets.\n",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "TokenErrorDetails",
+      "s": "Details object of an error that occurred while attempting to tokenize.",
+      "k": "i",
+      "p": [
+        {
+          "n": "field",
+          "s": "Particular field that caused the error, if applicable. E.g. Card Number",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "message",
+          "s": "Error message.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "type",
+          "s": "Type of error thrown.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "ApplePay",
+      "ex": [
+        {
+          "c": "// Create a request to pay 1.00 USD\nconst paymentRequest = payments.paymentRequest({\n  total: {\n    amount: 100,\n    currencyCode: 'USD'\n  }\n});\n\n// Get a new Apple Pay method\nconst applePay = await payments.applePay(paymentRequest);\n\nconst applePayButtonTarget = document.getElementById('applePay');\napplePayButtonTarget.onclick = async () => {\n  //Start the Apple Pay flow and await the secure token result\n  const tokenResult = await applePay.tokenize();\n\n  // Pass the TokenResult to your server to complete the payment\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The ApplePay Payment Method.",
+      "d": "Requests a payment nonce for a payment card stored in an Apple Pay digital wallet.\n",
+      "k": "i",
+      "m": [
+        {
+          "n": "destroy",
+          "ex": [
+            {
+              "c": "await applePay.destroy();",
+              "l": "javascript"
+            }
+          ],
+          "s": "Destroys the ApplePay payment method. The attached element is emptied and all event listeners are removed.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "A promise which resolves when the ApplePay instance is destroyed"
+        },
+        {
+          "n": "tokenize",
+          "ex": [
+            {
+              "c": "applePayButtonTarget.onclick = async () => {\n try {\n   const result = await applePay.tokenize();\n\n   if (result.status === \"OK\"){\n      console.log(result);\n      // Pass the TokenResult to your server to complete the payment\n      await processPayment(result.token);\n      alert('Apple Pay Payment Complete for '\n         '${result.details.shipping.contact.givenName} '\n         '${result.details.shipping.contact.familyName}');\n   }\n\n   if (result.status === \"CANCEL\"){\n      alert('Buyer cancelled the tokenization');\n   }\n }\n catch (e){\n   // Something went wrong\n   console.error(e)\n }\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "Tokenizes a payment request after validating the buyer. When the buyer completes their interaction\nwith Apple Pay, the returned promise resolves with a tokenResult object. The returned token\nand buyer details can be used to complete the payment on your server.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenResult"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "ApplePay failed to initialize for unknown reasons.",
+              "e": "UnexpectedError"
+            },
+            {
+              "d": "The payment request could not be tokenized.",
+              "e": "TokenizationError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Card",
+      "ex": [
+        {
+          "c": "const payments = Square.payments(appId, locationId);\nconst card = await payments.card();\nawait card.attach('#card');\nconst form = document.querySelector('#card-payment');\nform.addEventListener('submit', async (event) => {\n   event.preventDefault();\n   const result = await card.tokenize(); // the card nonce\n});",
+          "l": "javascript"
+        }
+      ],
+      "s": "The credit or debit card payment method",
+      "d": "An object that has the methods to create and set up a single card payment.\nCreated by `payments.card()`.",
+      "k": "i",
+      "m": [
+        {
+          "n": "addEventListener",
+          "ex": [
+            {
+              "c": "const callback = async (cardInputEvent) => {\n  alert(`Card brand changed to ${cardInputEvent.detail.cardBrand}`);\n};\ncard.addEventListener(\"cardBrandChanged\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Adds an event listener to the instance of the Card element.\nProvides specific typings related to card element events.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The card entry event type to listen for.\n  For more details about the available options, see [CardInputEventTypes](https://developer.squareup.com/reference/sdks/web/payments/enums/CardInputEventTypes).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "focusClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "focusClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "cardBrandChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "postalCodeChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "escape"
+                },
+                {
+                  "pT": "s",
+                  "pV": "submit"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            },
+                            "cT": [
+                              {
+                                "pT": "o",
+                                "ent": "CardInputEvent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "attach",
+          "ex": [
+            {
+              "c": "await card.attach('#elementId');",
+              "l": "javascript"
+            }
+          ],
+          "s": "Attaches the Card form to the page.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "completedPromise - A promise that resolves when the button has attached to the page\n",
+          "p": [
+            {
+              "n": "selectorOrElement",
+              "d": "A valid selector or HTMLElement of an empty <div> or <span>\nwhere the Card form will be inserted.",
+              "t": [
+                {
+                  "pT": "s"
+                },
+                {
+                  "pT": "o",
+                  "ent": {
+                    "n": "HTMLElement",
+                    "ext": true,
+                    "k": "c"
+                  }
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "`Card` is already attached to a DOM element",
+              "e": "PaymentMethodAlreadyAttachedError"
+            },
+            {
+              "d": "An unexpected SDK error has occurred",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "configure",
+          "ex": [
+            {
+              "c": "const cardOptions = {\n   \"postalCode\": \"12345\",\n   \"style\": {\n     \"input\": {\n       \"color\": \"red\",\n     },\n     // You can use media queries with valid selectors:\n     \"@media screen and (max-width: 600px)\": {\n       \"input\": {\n          \"fontSize\": \"12px\",\n       }\n     }\n   }\n}\n\nawait card.configure(cardOptions);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Set field input style and behavior of the card payment input fields.\nFor more information about customizing the card form, see available [CardOptions](https://developer.squareup.com/reference/sdks/web/payments/objects/CardOptions).",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "options",
+              "d": "Input field configuration and style options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "CardOptions"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "`Card` is not attached to a DOM element yet.",
+              "e": "PaymentMethodNotAttachedError"
+            },
+            {
+              "d": "An unexpected SDK error has occurred",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "destroy",
+          "ex": [
+            {
+              "c": "const destroyed = await card.destroy();",
+              "l": "javascript"
+            }
+          ],
+          "s": "Destroys the card payment object. The attached element is emptied and all event listeners are removed.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "focus",
+          "s": "Sets the DOM focus of one of the input fields within the credit card form.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "b"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "field",
+              "d": "The Field to focus.\n  For more details about the available options, see [CardFieldNames](https://developer.squareup.com/reference/sdks/web/payments/enums/CardFieldNames).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "cardNumber"
+                },
+                {
+                  "pT": "s",
+                  "pV": "cvv"
+                },
+                {
+                  "pT": "s",
+                  "pV": "expirationDate"
+                },
+                {
+                  "pT": "s",
+                  "pV": "postalCode"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "the specified field name is invalid",
+              "e": "InvalidFieldNameError"
+            }
+          ]
+        },
+        {
+          "n": "recalculateSize",
+          "ex": [
+            {
+              "c": "card.recalculateSize()",
+              "l": "javascript"
+            }
+          ],
+          "s": "Recalculates the size of the card form.",
+          "d": "The Card component normally automatically resizes based on the size of the buyer's browser,\nhowever if the Card component is contained with an element that has a computed style property\nof \"display: none\", then the Card component will no longer have a defined width and therefore\nwill not properly resize between mobile and desktop configurations. Upon being displayed again,\nthe Card component will not automatically update its size to match the browser window.\n\nThis method recalculateSize() can be used to handle this edge case by forcing the Card\ncomponent to recalculate its size and display appropriately for mobile or desktop.\n",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "er": [
+            {
+              "d": "`Card` is has not been attached to a DOM element",
+              "e": "PaymentMethodNotAttachedError"
+            }
+          ]
+        },
+        {
+          "n": "removeEventListener",
+          "ex": [
+            {
+              "c": "card.removeEventListener(\"cardBrandChanged\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Removes an event listener from the instance of the Card element.\nProvides specific typings related to card element events.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The event to stop listening for.\n  For more details about the available options, see [CardInputEventTypes](https://developer.squareup.com/reference/sdks/web/payments/enums/CardInputEventTypes).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "focusClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "focusClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "cardBrandChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "postalCodeChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "escape"
+                },
+                {
+                  "pT": "s",
+                  "pV": "submit"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            },
+                            "cT": [
+                              {
+                                "pT": "o",
+                                "ent": "CardInputEvent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "tokenize",
+          "ex": [
+            {
+              "c": "const form = document.querySelector('#card-payment');\n   form.addEventListener('submit', async (event) => {\n   event.preventDefault();\n   const result = await card.tokenize(); // the card nonce\n   if (result.status == \"OK\") {\n     alert(`Card: ${result.details.card.brand} -\n       ${result.details.card.type} ${result.details.card.last4} charged successfully.`);\n   }\n   if (result.status == \"INVALID\") {\n     result.errors.forEach(error => {\n       console.log(`ValidationError: ${result.errors[0].field}: ${result.errors[0].message}`);\n     })\n   }\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Tokenizes the card payment and returns a nonce.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenResult"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "TokenizationError if tokenization fails"
+            },
+            {
+              "d": "`Card` is not attached to a DOM element yet.",
+              "e": "PaymentMethodNotAttachedError"
+            },
+            {
+              "d": "Tokenization of the payment card failed.",
+              "e": "TokenizationError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "CardInputEvent",
+      "ex": [
+        {
+          "c": "card.addEventListener(\"cardBrandChanged\",  async (cardInputEvent) => {\n  const eventMessage = `Brand ${cardInputEvent.detail.cardBrand}\n  Valid input? ${cardInputEvent.detail.currentState.isCompletelyValid}\n  event type ${cardInputEvent.detail.eventType}\n  focused field ${cardInputEvent.detail.field}\n  Postal code ${cardInputEvent.detail.postalCodeValue}\n  Field empty on focus? ${cardInputEvent.detail.previousState.isEmpty}`\n  alert(eventMessage);\n});",
+          "l": "javascript"
+        }
+      ],
+      "s": "Input event emitted from the Card and Fields payment method instances.",
+      "d": "This object contains the current and previous state of an input field that\ntriggered a card input event on buyer actions such as selecting a field, inputting\na value, or selecting the next input field.",
+      "k": "i",
+      "p": [
+        {
+          "n": "cardBrand",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "currentState",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardInputEventState"
+            }
+          ]
+        },
+        {
+          "n": "eventType",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "CardInputEventTypes"
+            }
+          ]
+        },
+        {
+          "n": "field",
+          "s": "The input field that triggered the event",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "CardFieldNames"
+            }
+          ]
+        },
+        {
+          "n": "postalCodeValue",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "previousState",
+          "s": "The state of the input field prior to the change that triggered the event",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardInputEventState"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "CardInputEventState",
+      "ex": [
+        {
+          "c": "card.addEventListener(\"cardBrandChanged\",  async (cardInputEvent) => {\n  const currentInputEventState = cardInputEvent.currentState;\n  const previousInputEventState = cardInputEvent.previousState;\n  const eventMessage = `Valid input? ${currentInputEventState.isCompletelyValid}\n  Was field empty? ${previousInputEventState.isEmpty}`\n  alert(eventMessage);\n});",
+          "l": "javascript"
+        }
+      ],
+      "s": "The state of an input field at the time a card input event is triggered",
+      "k": "i",
+      "p": [
+        {
+          "n": "hasErrorClass",
+          "s": "An error style class is applied to the input field due to an input error",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        },
+        {
+          "n": "hasFocusClass",
+          "s": "The input field has been selected",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        },
+        {
+          "n": "isCompletelyValid",
+          "s": "The SDK has validated the input field contents",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        },
+        {
+          "n": "isEmpty",
+          "s": "The input field is empty",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        },
+        {
+          "n": "isPotentiallyValid",
+          "s": "The input value is not empty and is being validated",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "CardOptions",
+      "ex": [
+        {
+          "c": "const cardOptions = getCardOptions();\nconst card = await payments.card(cardOptions);\n\nfunction getCardOptions() {\n   return {\n     \"postalCode\" : \"12345\",\n     \"style\": {\n       \"input\": {\n         \"color\": \"red\",\n       },\n       // You can use media queries with valid selectors:\n       \"@media screen and (max-width: 600px)\": {\n         \"input\": {\n           \"fontSize\": \"12px\",\n         }\n       }\n     },\n   };\n};",
+          "l": "javascript"
+        }
+      ],
+      "s": "An interface that declares the properties used to customize the appearance\nand behavior of the card entry form.\nFor more information about applying custom styles to the card form, see the available [CardClassSelectors](https://developer.squareup.com/reference/sdks/web/payments/objects/CardClassSelectors) for styling.",
+      "k": "i",
+      "p": [
+        {
+          "n": "postalCode",
+          "ex": [
+            {
+              "c": "{\n  \"postalCode\" : \"Zipcode\",\n};",
+              "l": "javascript"
+            }
+          ],
+          "s": "An alternate postal code input prompt to show the correct\nprompt for a region",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "style",
+          "s": "A map of .css classes and values that customize the style of the\ninput fields",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardClassSelectors"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "CardClassSelectors",
+      "ex": [
+        {
+          "c": "const cardClassSelectors = {\n   input: {\n      backgroundColor: '#F7F8F9',\n      color: '#373F4A',\n      fontFamily: 'Helvetica Neue',\n      fontSize: '16px',\n      fontWeight: 'normal'\n   },\n   'input.is-focus': {\n      backgroundColor: '#F7F8F9',\n      color: '#3X3F4A',\n      fontFamily: 'Helvetica Neue',\n      fontSize: '16px',\n      fontWeight: 'normal'\n   },\n   '.input-container': {\n      borderColor: 'lightgrey',\n      borderWidth: '1px',\n   },\n   '.input-container.is-focus': {\n      borderColor: '#cc0023',\n      borderWidth: '0 0 2px 0',\n   },\n   '.input-container.is-error': {\n      borderColor: '#006aff',\n      borderWidth: '0 0 2px 0',\n   },\n   '.message-icon': {\n      color: 'green',\n   },\n   // You can use media queries with valid selectors:\n   '@media screen and (max-width: 600px)': {\n      input: {\n        'fontSize': '12px',\n     }\n   }\n   '@media only screen and (orientation: portrait)': {\n     '.message-text': {\n       'color': 'transparent',\n     }\n   }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The stylesheet classes assigned to input fields by field state",
+      "d": "Use this object to set the appearance of Card input fields by their current\nfocus and input validity state. Note: font size has a maximum of 16px.\n\nMedia Queries can be used with valid CardClassSelectors. Syntax support for [level 3 features](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)",
+      "k": "i",
+      "p": [
+        {
+          "n": ".input-container",
+          "s": "The default style of the Card payment method component",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "borderColor",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "borderRadius",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "borderWidth",
+                        "s": "`border-width` can be specified with 1, 2, 3, or 4 values.\nIt allows for length values of `px` and `em`, or a value of `0`.\nIt does not allow for the keyword value of `thin`, `medium`, or `thick`.",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".input-container.is-error",
+          "s": "The style of the Card payment method component when an input field is in an error state",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "borderColor",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "borderWidth",
+                        "s": "`border-width` for state properties is `inset`, and starts from the outside border.\n`border-width` can be specified with 1, 2, 3, or 4 values.\nIt allows for length values of `px` and `em`, or a value of `0`.\nIt does not allow for the keyword value of `thin`, `medium`, or `thick`.",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".input-container.is-focus",
+          "s": "The style of the Card payment method component when it has focus",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "borderColor",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "borderWidth",
+                        "s": "`border-width` for state properties is `inset`, and starts from the outside border.\n`border-width` can be specified with 1, 2, 3, or 4 values.\nIt allows for length values of `px` and `em`, or a value of `0`.\nIt does not allow for the keyword value of `thin`, `medium`, or `thick`.",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".message-icon",
+          "s": "The style of the input field helper icon",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".message-icon.is-error",
+          "s": "The style of the input field error icon",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".message-text",
+          "s": "The style of the input field helper text",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": ".message-text.is-error",
+          "s": "The style of the input field error text",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input",
+          "s": "The default style of a Card input field",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "backgroundColor",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontFamily",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontSize",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontWeight",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input.is-error",
+          "s": "The style of an input field when the field is in an error state",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input.is-error::placeholder",
+          "s": "The style of an input field placeholder when the field is in an error state",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input.is-focus",
+          "s": "The style of an input field that has focus",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "backgroundColor",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontFamily",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontSize",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      },
+                      {
+                        "n": "fontWeight",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input.is-focus::placeholder",
+          "s": "The style of an input field placeholder when the field has focus",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "input::placeholder",
+          "s": "The default style of an input field placeholder",
+          "t": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Partial",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "f",
+                  "ent": {
+                    "n": "object",
+                    "k": "i",
+                    "p": [
+                      {
+                        "n": "color",
+                        "t": [
+                          {
+                            "pT": "s"
+                          },
+                          {
+                            "pT": "u"
+                          }
+                        ],
+                        "o": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "GiftCard",
+      "ex": [
+        {
+          "c": "const payments = Square.payments(appId, locationId);\nconst giftCard = await payments.giftCard();\nawait giftCard.attach('#gift-card');\nconst form = document.querySelector('#gift-card-payment');\nform.addEventListener('submit', async (event) => {\n   event.preventDefault();\n   const result = await giftCard.tokenize(); // the gift card nonce\n});",
+          "l": "javascript"
+        }
+      ],
+      "s": "An object with the methods to create and set up a Gift Cards payment.",
+      "d": "Created by calling the `payments.giftCard()` method.",
+      "k": "i",
+      "m": [
+        {
+          "n": "addEventListener",
+          "ex": [
+            {
+              "c": "const callback = async () => {\n  alert(`The GiftCard element was focused by the buyer`);\n};\ngiftCard.addEventListener(\"focusClassAdded\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Adds an event listener to the GiftCard instance.\nProvides specific typings related to giftCard element events.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The card entry event type to listen for.\n  For more details about the available options, see [CardInputEventTypes](https://developer.squareup.com/reference/sdks/web/payments/enums/CardInputEventTypes).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "focusClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "focusClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "cardBrandChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "postalCodeChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "escape"
+                },
+                {
+                  "pT": "s",
+                  "pV": "submit"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            },
+                            "cT": [
+                              {
+                                "pT": "o",
+                                "ent": "GiftCardInputEvent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "attach",
+          "ex": [
+            {
+              "c": "await giftCard.attach('#elementId');",
+              "l": "javascript"
+            }
+          ],
+          "s": "Attaches the GiftCard form to the page.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "completedPromise - A promise that resolves when the button has attached to the page\n",
+          "p": [
+            {
+              "n": "selectorOrElement",
+              "d": "A valid selector or HTMLElement of an empty <div> or <span>\nwhere the Gift Cards form will be inserted.",
+              "t": [
+                {
+                  "pT": "s"
+                },
+                {
+                  "pT": "o",
+                  "ent": {
+                    "n": "HTMLElement",
+                    "ext": true,
+                    "k": "c"
+                  }
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "`GiftCard` is already attached to\na DOM element",
+              "e": "PaymentMethodAlreadyAttachedError"
+            },
+            {
+              "d": "An internal SDK error has occurred",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "configure",
+          "ex": [
+            {
+              "c": "const giftCardOptions = {\n  \"style\": {\n    \"input\": {\n      \"color\": \"red\"\n    }\n  }\n}\n\nawait giftCard.configure(giftCardOptions);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Configures the GiftCard payment method with visual and behavior options.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "GiftCardOptions"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "`GiftCard` has not been attached to a\nDOM element yet",
+              "e": "PaymentMethodNotAttachedError"
+            },
+            {
+              "d": "An internal SDK error has occurred.",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "destroy",
+          "ex": [
+            {
+              "c": "const giftCardDestroyed = await giftCard.destroy();",
+              "l": "javascript"
+            }
+          ],
+          "s": "Destroys the payment method. The attached element is emptied and all event listeners are removed.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "focus",
+          "ex": [
+            {
+              "c": "const focused = await giftCard.focus(\"giftCardNumber\");",
+              "l": "javascript"
+            }
+          ],
+          "s": "Sets the DOM focus of one of the input fields within the GiftCard form.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "b"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "field",
+              "d": "– The Field to focus.\n  For more details about the available options, see [GiftCardFieldNames](https://developer.squareup.com/reference/sdks/web/payments/enums/GiftCardFieldNames).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "giftCardNumber"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "removeEventListener",
+          "ex": [
+            {
+              "c": "giftCard.removeEventListener(\"focusClassAdded\", callback);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Removes an event listener from the GiftCard instance.\nProvides specific typings related to Gift Cards element events.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "eventType",
+              "d": "The event to stop listening for.\n  For more details about the available options, see [CardInputEventTypes](https://developer.squareup.com/reference/sdks/web/payments/enums/CardInputEventTypes).",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "focusClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "focusClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassAdded"
+                },
+                {
+                  "pT": "s",
+                  "pV": "errorClassRemoved"
+                },
+                {
+                  "pT": "s",
+                  "pV": "cardBrandChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "postalCodeChanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "escape"
+                },
+                {
+                  "pT": "s",
+                  "pV": "submit"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "The method that is invoked on the callback",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "v"
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "event",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": {
+                              "n": "SqEvent",
+                              "ext": true,
+                              "k": "c"
+                            },
+                            "cT": [
+                              {
+                                "pT": "o",
+                                "ent": "GiftCardInputEvent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "tokenize",
+          "ex": [
+            {
+              "c": "form.addEventListener('submit', async (event) => {\n  event.preventDefault();\n  const result = await giftCard.tokenize();\n  if (result.status == \"OK\") {\n     // Process payment with result.token\n  }\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Tokenizes a GiftCard payment method instance.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenResult"
+                }
+              ]
+            }
+          ],
+          "rD": "Promise<TokenResult>",
+          "er": [
+            {
+              "d": "TokenizationError if tokenization fails"
+            },
+            {
+              "d": "`GiftCard` has not been attached to\na DOM element yet.",
+              "e": "PaymentMethodNotAttachedError"
+            },
+            {
+              "d": "The giftCard could not be tokenized.",
+              "e": "TokenizationError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "GiftCardInputEvent",
+      "ex": [
+        {
+          "c": "{\n \"cardBrand\": \"Visa\",\n \"currentState\": {\n   \"hasErrorClass\": false,\n   \"hasFocusClass\": true,\n   \"isCompletelyValid\": true,\n   \"isEmpty\": false,\n   \"isPotentiallyValid\": true\n  },\n  \"eventType\": \"focusClassAdded\",\n  \"field\": \"cvv\",\n  \"previousState\": {\n   \"hasErrorClass\": false,\n   \"hasFocusClass\": false,\n   \"isCompletelyValid\": true,\n   \"isEmpty\": true,\n   \"isPotentiallyValid\": false\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "GiftCard field event interface",
+      "d": "Declares the shape of the callback event argument.\nThis object carries the state of a GiftCard input field including styles\napplied, the state of an input field contents",
+      "k": "i",
+      "p": [
+        {
+          "n": "cardBrand",
+          "s": "The brand of the gift card used by the buyer",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "currentState",
+          "s": "The current state of the field that invoked the event",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardInputEventState"
+            }
+          ]
+        },
+        {
+          "n": "eventType",
+          "s": "The type of the event",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "CardInputEventTypes"
+            }
+          ]
+        },
+        {
+          "n": "field",
+          "s": "The input field whose state change invoked the event",
+          "t": [
+            {
+              "pT": "s",
+              "enu": "GiftCardFieldNames"
+            }
+          ]
+        },
+        {
+          "n": "previousState",
+          "s": "The state of the field prior to the state change",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardInputEventState"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "GiftCardOptions",
+      "ex": [
+        {
+          "c": "{\n  \"style\": {\n    \"input\": {\n      \"color\": \"red\"\n    }\n  }\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "GiftCard payment method options interface",
+      "d": "Declares the shape of an object with properties to configure the style and\nbehavior of the gift card payment method. This object is the `options`\nargument of the `GiftCard.prototype.configure` method.",
+      "k": "i",
+      "p": [
+        {
+          "n": "style",
+          "s": "CSS class to style the input field",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "CardClassSelectors"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "GooglePay",
+      "ex": [
+        {
+          "c": "const paymentRequest = payments.paymentRequest({\n  countryCode: 'US',\n  currencyCode: 'USD',\n  total: {\n    amount: '5.79',\n    label: 'Total'\n  },\n});\n\nconst googlePay = await payments.googlePay(paymentRequest);\nawait googlePay.attach('#googlePay');\n\nconst googlePayButtonTarget = document.getElementById('googlePay');\ngooglePayButtonTarget.onclick = async () => {\n  const tokenResult = await googlePay.tokenize();\n\n  // Pass `tokenResult.token` to your server, and then call the /v2/payments API\n  // to complete the payment\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "The Google Pay Payment Method.",
+      "d": "Google Pay supports taking payments via credit cards. Utilizing the PaymentRequest object,\nyou can handle Shipping Option selection, as well as collect Shipping and Billing addresses.\n",
+      "k": "i",
+      "m": [
+        {
+          "n": "attach",
+          "ex": [
+            {
+              "c": "// Create a Google Pay button in the target element with customization\n// including a white button background, static button sizing, and the\n// long button type which shows \"Buy with G Pay\" on the button.\nawait googlePay.attach('#googlePay', {\n  buttonColor: 'white',\n  buttonSizeMode: 'static',\n  buttonType: 'long'\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Attaches the Google Pay button to the page.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "completedPromise - A promise that resolves when the button has attached to the page\n",
+          "p": [
+            {
+              "n": "selectorOrElement",
+              "d": "A valid selector or HTMLElement of an empty <div> or <span>\nelement where the Google Pay button will be inserted.",
+              "t": [
+                {
+                  "pT": "s"
+                },
+                {
+                  "pT": "o",
+                  "ent": {
+                    "n": "HTMLElement",
+                    "ext": true,
+                    "k": "c"
+                  }
+                }
+              ]
+            },
+            {
+              "n": "googlePayButtonOptions",
+              "d": "A optional object containing configuration options\nfor the Google Pay button.\n",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "GooglePayButtonOptions"
+                }
+              ],
+              "o": true
+            }
+          ],
+          "er": [
+            {
+              "d": "Google Pay is not available due to\nmisconfiguration or non-support on this device or browser",
+              "e": "PaymentMethodUnsupportedError"
+            }
+          ]
+        },
+        {
+          "n": "destroy",
+          "ex": [
+            {
+              "c": "await googlePay.destroy();",
+              "l": "javascript"
+            }
+          ],
+          "s": "Destroys this `GooglePay` instance. This method cleans up the `GooglePay` instance and\nremoves the Google Pay button from the page.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "u"
+                }
+              ]
+            }
+          ],
+          "rD": "A promise which resolves when the `GooglePay` instance is destroyed\n"
+        },
+        {
+          "n": "tokenize",
+          "ex": [
+            {
+              "c": "googlePayButtonTarget.onclick = async () => {\n  const tokenResult = await googlePay.tokenize();\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "This method presents the Google Pay payment sheet. When the buyer completes their interaction\nwith Google Pay, the returned promise resolves with a tokenResult object. The returned token\nand buyer details can be used to complete the payment on your server.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "TokenResult"
+                }
+              ]
+            }
+          ],
+          "rD": "A promise that resolves when the buyer completes\ntheir interaction with Google Pay.",
+          "er": [
+            {
+              "d": "Tokenization failed because of an internal error",
+              "e": "UnexpectedError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "GooglePayButtonOptions",
+      "ex": [
+        {
+          "c": "{\n   \"buttonColor\": \"black\",\n   \"buttonSizeMode\": \"static\",\n   \"buttonType\": \"short\"\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Provides display properties for rendering a Google Pay button",
+      "d": "This object lets you set the color, size, and button fitting method for\na Google Pay button.",
+      "k": "i",
+      "p": [
+        {
+          "n": "buttonColor",
+          "s": "Set the button background color to black or white.\n For more details about the available options, see [GooglePayButtonColor](https://developer.squareup.com/reference/sdks/web/payments/enums/GooglePayButtonColor).",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "default"
+            },
+            {
+              "pT": "s",
+              "pV": "black"
+            },
+            {
+              "pT": "s",
+              "pV": "white"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "buttonSizeMode",
+          "s": "Set fitting mode to dynamically size button or fixed size.\n For more details about the available options, see [GooglePayButtonSizeMode](https://developer.squareup.com/reference/sdks/web/payments/enums/GooglePayButtonSizeMode).",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "static"
+            },
+            {
+              "pT": "s",
+              "pV": "fill"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "buttonType",
+          "s": "Render a long or short button.\n For more details about the available options, see [GooglePayButtonType](https://developer.squareup.com/reference/sdks/web/payments/enums/GooglePayButtonType).",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "long"
+            },
+            {
+              "pT": "s",
+              "pV": "short"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "CardTokenOptions",
+      "ex": [
+        {
+          "c": "const billingContact = {\n  addressLines: ['555 Maple Street', '#222'],\n  city: 'Seattle',\n  countryCode: 'US',\n  email: 'johndoe@example.com',\n  familyName: 'Doe',\n  givenName: 'john',\n  phone: '2065551212',\n  postalCode: '98539',\n  state: 'WA',\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Optional parameters provided to the Card payment `tokenize` method",
+      "d": "Use `CardTokenOptions` to provide a billing contact when required by\nthe seller.",
+      "k": "i",
+      "p": [
+        {
+          "n": "billing",
+          "s": "The buyer to be billed",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "Contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "LineItem",
+      "ex": [
+        {
+          "c": "{\n  \"label\": \"Shipping charges\",\n  \"amount\": \"15.69\",\n  \"pending\": true\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "A single line item in an Apple Pay or Google Pay payment request",
+      "d": "Line items are optional and can be included in a payment request when there\nare calculated charges such as taxes and shipping charges added on to a\npurchase.",
+      "k": "i",
+      "p": [
+        {
+          "n": "amount",
+          "s": "The amount of the line item. An amount is given as a string representation\nfloat with two decimal places (e.g., `\"15.00\"`).",
+          "d": "This is typically the cost of an item or service, or additional charge\n(e.g., taxes, shipping). Use `\"0.00\"` to indicate free or no cost, and\nnegative values to indicate discounts, etc.\n\nIf the line item is a payment `total`, this is the total charge of the\npayment and should equal the sum of the line items.\n",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "label",
+          "s": "Description or purpose of the line item. This is typically the name of the\nitem or service purchased. If the line item is a payment `total`, the label\nis instead the merchant name.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "pending",
+          "s": "Indicates whether the value in the `amount` field represents an estimated\nor unknown cost.",
+          "d": "Default: `false`\n\nIf the line item is a payment `total` and any other line item is pending,\nthe total must also be pending.\n\n**Notes**\n- Apple Pay displays pending line items with an amount of `\"pending\"`\ninstead of the `amount` value.\n- Google Pay does not display pending line items.\n",
+          "t": [
+            {
+              "pT": "b"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentRequestOptions",
+      "ex": [
+        {
+          "c": "const paymentRequestOptions = {\n   \"countryCode\": \"US\",\n   \"currencyCode\": \"USD\",\n   \"lineItems\": [\n     {\n       \"label\": \"Shipping charges\",\n       \"amount\": \"15.69\",\n       \"pending\": true\n     }\n   ],\n   \"requestBillingContact\": false,\n   \"requestShippingContact\": false,\n   \"shippingOptions\"[\n     {\n       \"label\": \"Next Day\",\n       \"amount\": \"15.69\",\n       \"id\": \"1\"\n     },\n     {\n       \"label\": \"Three Day\",\n       \"amount\": \"2.00\",\n       \"id\": \"2\"\n     }\n   ],\n   // pending is only required if it's true.\n   \"total\": {\n     \"amount\": \"100.00\",\n     \"label\": \"Total\",\n   },\n};",
+          "l": "javascript"
+        }
+      ],
+      "s": "The payments.paymentRequest method argument",
+      "d": "This object contains the details of a payment request including line items,\nshipping contact and options, and total payment request.\n",
+      "k": "i",
+      "p": [
+        {
+          "n": "countryCode",
+          "s": "Required: two-letter ISO 3166-1 country code of the merchant.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "currencyCode",
+          "s": "Required: two-letter ISO 4217 country currency code",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "GBP"
+            },
+            {
+              "pT": "s",
+              "pV": "USD"
+            }
+          ]
+        },
+        {
+          "n": "lineItems",
+          "s": "Optional: Details line items including any calculated fees and taxes",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "LineItem"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "requestBillingContact",
+          "s": "Optional: defaults to false. Requests the buyer to provide billing contact\ninformation",
+          "t": [
+            {
+              "pT": "b"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "requestShippingContact",
+          "s": "Optional: defaults to false. Requests the buyer to provide shipping contact\ninformation",
+          "t": [
+            {
+              "pT": "b"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "shippingContact",
+          "s": "Pre set the shipping contact",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ShippingContact"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "shippingOptions",
+          "s": "Optional: Shows a set of shipping options to the buyer",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "ShippingOption"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "total",
+          "s": "Required: Total amount of purchase including line item amounts.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "LineItem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "PaymentRequestUpdate",
+      "ex": [
+        {
+          "c": "req.addEventListener('shippingcontactchanged', (contact) => {\n  const shippingErrors = \"shippingErrors\": {\n      \"addressLines\": \"1234 Nth Main Street\",\n      \"city\": \"New Bork\",\n      \"country\": \"XSA\",\n      \"postalCode\": \"9468x\",\n      \"MY\"\n  };\n  const lineItems = \"lineItems\":[\n      {\n       \"label\": \"Shipping charges\",\n       \"amount\": \"15.69\",\n       \"pending\": true\n      }\n   ];\n   const total = \"total\": \"412.00\";\n   return { shippingErrors, lineItems, total };\n});",
+          "l": "javascript"
+        }
+      ],
+      "s": "Interface that describes the object argument of the `paymentRequest.addEventListener` method\nreturn value.",
+      "d": "Use this interface to create an object that contains payment request\nproperties that are to be updated in the digital wallet payment sheet after\nrecalculating fees or catching buyer input errors.",
+      "k": "i",
+      "p": [
+        {
+          "n": "error",
+          "s": "Allows for an error message when a valid shipping address is not usable.",
+          "d": "If the shipping address is valid but the item cannot be shipped there,\nuse this field to provide an appropriate error message to the buyer.\n\n```js\nreq.addEventListener('shippingcontactchange', (contact) => {\n  if (contact.countryCode !== 'US') {\n    return { error: 'Unfortunately, we only ship to US addresses.'};\n  }\n}\n```\n",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "lineItems",
+          "s": "Replaces the current list of line items.",
+          "d": "The most common updates are to shipping or sales tax amounts, based on\nthe buyer's shipping address and/or chosen shipping option.\n",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "LineItem"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "shippingErrors",
+          "s": "Allows for more granular messages when a shipping address is not valid.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "ShippingErrors"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "shippingOptions",
+          "s": "Replaces the current list of shipping options.",
+          "d": "Typically used in response to the buyer choosing a new shipping address.\n",
+          "t": [
+            {
+              "pT": "a",
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "ShippingOption"
+                }
+              ]
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "total",
+          "s": "Replaces the current total.",
+          "d": "The sum of the amounts of the line items must equal the total.\n",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "LineItem"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "ShippingErrors",
+      "ex": [
+        {
+          "c": "const shippingErrors = {\n   postalCode: 'A valid US Zip Code is required. Please check and try again.'\n}",
+          "l": "javascript"
+        }
+      ],
+      "s": "Details about digital wallet shipping address errors",
+      "d": "`ShippingErrors` provides the address field whose value is in error and\n the details of the error. Each `ShippingError` object describes one address\nfield with its corresponding error.",
+      "k": "i",
+      "p": [
+        {
+          "n": "addressLines",
+          "s": "Indicate the address lines are not valid.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "city",
+          "s": "Indicate the city/locality is not valid.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "country",
+          "s": "Indicate the country is not valid.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "postalCode",
+          "s": "Indicate the postal code is not valid.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "state",
+          "s": "Indicate the state/province/region is not valid.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        }
+      ]
+    },
+    {
+      "n": "PaymentRequest",
+      "ex": [
+        {
+          "c": "const payments = Square.payments(appId, locationId);\n\nconst paymentRequest = payments.paymentRequest({\n  countryCode: 'US',\n  currencyCode: 'USD',\n  requestBillingContact: true,\n  requestShippingContact: true,\n  lineItems: [\n     { amount: '2.00', label: 'Item Cost' },\n     { amount: '0.00', label: 'Shipping' },\n     { amount: '0.00', label: 'Tax' },\n  ],\n  shippingOptions: [\n     {\n       amount: '0.00',\n       id: 'shipping-option-1',\n       label: 'Free',\n     },\n  ],\n  total: {\n    amount: '1.00',\n    label: 'Total',\n  }\n});\n\nconst applePay = await payments.applePay(paymentRequest);\nconst googlePay = await payments.googlePay(paymentRequest);",
+          "l": "javascript"
+        }
+      ],
+      "s": "An object that represents an Apple Pay or Google Pay payment request",
+      "d": "`PaymentRequest` encapsulates the details of an Apple Pay or Google Pay request\nfor payment and a method for connecting event listeners to the payment request.\n",
+      "k": "i",
+      "m": [
+        {
+          "n": "addEventListener",
+          "ex": [
+            {
+              "c": "req.addEventListener('shippingcontactchanged', (contact) => {\n  // action\n  return { lineItems, total, shippingOptions };\n});\nreq.addEventListener('shippingoptionchanged', (option) => {\n // action\n // the callback can be either async or sync.\n return Promise.resolve({ lintItems, total });\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Adds an event listener to the PaymentRequest.",
+          "rT": [
+            {
+              "pT": "v"
+            }
+          ],
+          "p": [
+            {
+              "n": "event",
+              "t": [
+                {
+                  "pT": "s",
+                  "pV": "shippingcontactchanged"
+                },
+                {
+                  "pT": "s",
+                  "pV": "shippingoptionchanged"
+                }
+              ]
+            },
+            {
+              "n": "callback",
+              "d": "\n",
+              "t": [
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "o",
+                        "ent": "PaymentRequestUpdate"
+                      },
+                      {
+                        "pT": "o",
+                        "ent": {
+                          "n": "Promise",
+                          "ext": true,
+                          "k": "c"
+                        },
+                        "cT": [
+                          {
+                            "pT": "o",
+                            "ent": "PaymentRequestUpdate"
+                          }
+                        ]
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "contact",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": "ShippingContact"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "pT": "f",
+                  "m": {
+                    "n": "function",
+                    "rT": [
+                      {
+                        "pT": "o",
+                        "ent": "PaymentRequestUpdate"
+                      },
+                      {
+                        "pT": "o",
+                        "ent": {
+                          "n": "Promise",
+                          "ext": true,
+                          "k": "c"
+                        },
+                        "cT": [
+                          {
+                            "pT": "o",
+                            "ent": "PaymentRequestUpdate"
+                          }
+                        ]
+                      }
+                    ],
+                    "p": [
+                      {
+                        "n": "option",
+                        "t": [
+                          {
+                            "pT": "o",
+                            "ent": "ShippingOption"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "update",
+          "ex": [
+            {
+              "c": "const updateSuccessful = req.update({ currencyCode: 'USD' });",
+              "l": "javascript"
+            }
+          ],
+          "s": "Updates the specified options of the PaymentRequest. Returns `true` if the update was\nsuccessful. Updates are not allowed while the Apple Pay or Google Pay payment sheets are\ncurrently being displayed to the buyer. In these cases, `update()` will return `false`.",
+          "rT": [
+            {
+              "pT": "b"
+            }
+          ],
+          "rD": "success\n",
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": {
+                    "n": "Partial",
+                    "ext": true,
+                    "k": "c"
+                  },
+                  "cT": [
+                    {
+                      "pT": "o",
+                      "ent": "PaymentRequestOptions"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "e": "InvalidPaymentRequestError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Payments",
+      "ex": [
+        {
+          "c": "const payments = Square.payments(appId, locationId);",
+          "l": "javascript"
+        }
+      ],
+      "s": "Returned by `Square.payments(appId, locationId)`.",
+      "d": "Use this object to instantiate Payment methods.",
+      "k": "i",
+      "m": [
+        {
+          "n": "ach",
+          "ex": [
+            {
+              "c": "const ach = await payments.ach()\n\nconst achButton = document.getElementById('ach-button')\nconst buyerNameField = document.getElementById('buyer-name-field');\nachButton.onclick = () => {\n  const tokenResult = ach.tokenize({ accountHolderName: buyerNameField.value });\n\n  // Process payment with tokenResult\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "Creates an ACH payment method instance",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "ACH"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "if the payment context cannot initialize",
+              "e": "UnexpectedError"
+            },
+            {
+              "d": "if the Plaid script cannot be loaded",
+              "e": "ScriptLoaderError"
+            }
+          ]
+        },
+        {
+          "n": "applePay",
+          "ex": [
+            {
+              "c": "const paymentRequest = payments.paymentRequest({\n  total: {\n    amount: 100,\n    currencyCode: 'USD'\n  }\n});\n\nconst applePay = await payments.applePay(paymentRequest);\n\nconst applePayButtonTarget = document.getElementById('target-element');\napplePayButtonTarget.onclick = async () => {\n  const tokenResult = await applePay.tokenize();\n\n  // Pass the TokenResult to your server to complete the payment\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "Create an ApplePay payment method instance.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "ApplePay"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "paymentRequest",
+              "d": "the payment request object created by [payments.paymentRequest(...)](https://developer.squareup.com/reference/sdks/web/payments/objects/Payments#Payments.paymentRequest)",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "PaymentRequest"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "the provided payment request was invalid",
+              "e": "InvalidPaymentRequestError"
+            },
+            {
+              "d": "if the payment context cannot initialize",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "card",
+          "ex": [
+            {
+              "c": "const payments = Square.payments(appId, locationId);\nconst card = await payments.card({\n  \"disablePostalCode\" : false,\n  \"postalCode\" : \"12345\",\n  \"style\": {\n    \"input\": {\n      \"color\": \"red\",\n    }\n    \"@media screen and (max-width: 600px)\": {\n        \"input\": {\n          \"fontSize\": \"12px\",\n       }\n     }\n  }\n});\nawait card.attach('#card');\nconst form = document.querySelector('#card-payment');\nform.addEventListener('submit', async (event) => {\n   event.preventDefault();\n   const result = await card.tokenize(); // the card nonce\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Creates a Card payment method.\nFor more information about customizing the card form, see available [CardOptions](https://developer.squareup.com/reference/sdks/web/payments/objects/CardOptions).",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "Card"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "CardOptions"
+                }
+              ],
+              "o": true
+            }
+          ],
+          "er": [
+            {
+              "d": "if the payment context cannot initialize",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "giftCard",
+          "ex": [
+            {
+              "c": "const payments = Square.payments(appId, locationId);\nconst giftCard = await payments.giftCard({\n  \"style\": {\n    \"input\": {\n      \"color\": \"red\"\n    }\n  }\n});\nawait giftCard.attach('#gift-card');\nconst form = document.querySelector('#gift-card-payment');\nform.addEventListener('submit', async (event) => {\n   event.preventDefault();\n   const result = await giftCard.tokenize(); // the gift card nonce\n});",
+              "l": "javascript"
+            }
+          ],
+          "s": "Creates a GiftCard payment method instance.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "GiftCard"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "GiftCardOptions"
+                }
+              ],
+              "o": true
+            }
+          ],
+          "er": [
+            {
+              "d": "if the payment context cannot initialize",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "googlePay",
+          "ex": [
+            {
+              "c": "const paymentRequest = payments.paymentRequest({\n  total: {\n    amount: 100,\n    currencyCode: 'USD'\n  }\n});\n\nconst googlePay = await payments.googlePay(paymentRequest);\n// Must be an element ID.\nawait googlePay.attach('#target-element');\n\nconst googlePayButtonTarget = document.getElementById('target-element');\ngooglePayButtonTarget.onclick = async () => {\n  const tokenResult = await googlePay.tokenize();\n\n  // Pass the TokenResult to your server to complete the payment\n}",
+              "l": "javascript"
+            }
+          ],
+          "s": "Create a GooglePay payment method instance.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "GooglePay"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "paymentRequest",
+              "d": "the payment request object created by [payments.paymentRequest(...)](https://developer.squareup.com/reference/sdks/web/payments/objects/Payments#Payments.paymentRequest)",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "PaymentRequest"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "the provided payment request was invalid",
+              "e": "InvalidPaymentRequestError"
+            },
+            {
+              "d": "if the payment context cannot initialize",
+              "e": "UnexpectedError"
+            },
+            {
+              "d": "if the Google Pay script cannot be loaded",
+              "e": "ScriptLoaderError"
+            }
+          ]
+        },
+        {
+          "n": "paymentRequest",
+          "ex": [
+            {
+              "c": "const paymentRequest = {\n   countryCode: 'US',\n   currencyCode: 'USD',\n   lineItems: [\n      { amount: '1.23', label: 'Cat', pending: false },\n      { amount: '4.56', label: 'Dog', pending: false },\n   ],\n   requestBillingContact: false,\n   requestShippingContact: true,\n   shippingContact: {\n      addressLines: ['1 Test St', ''],\n      city: 'San Francisco',\n      countryCode: 'US',\n      email: 'test@squareup.com',\n      familyName: 'First Name',\n      givenName: 'Last Name',\n      phone: '+12345678910',\n       postalCode: '11111',\n      state: 'CA',\n    },\n    shippingOptions: [\n      { amount: '0.00', id: 'FREE', label: 'Free' },\n      { amount: '9.99', id: 'XP', label: 'Express' },\n    ],\n    total: { amount: '5.79', label: 'Total', pending: false },\n  };\nconst payments = Square.payments(appId, locationId);\nconst req = payments.paymentRequest(paymentRequest);",
+              "l": "javascript"
+            }
+          ],
+          "s": "Creates a new PaymentRequest instance that sets up event listeners for GooglePay and ApplePay payment methods.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": "PaymentRequest"
+            }
+          ],
+          "rD": "\n",
+          "p": [
+            {
+              "n": "options",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "PaymentRequestOptions"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "setLocale",
+          "s": "Sets the locale of the Payments instance. If this method is not called explicitly, the user's browser\nlanguage specified by `navigator.language` will be used instead. If the language returned by\n`navigator.language` is unsupported, the SDK falls back to `en-US`.",
+          "d": "If the specified language passed to setLocale() is not supported, the operation is a no-op.\nIf the specified language is supported, but the specified region is not, Web Payments SDK will fall\nback to using the desired language in a different supported region.\n",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "SetLocaleResult"
+                }
+              ]
+            }
+          ],
+          "rD": "An object denoting the result of calling setLocale\n",
+          "p": [
+            {
+              "n": "locale",
+              "d": "The [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) locale string\nto set the WebPaySDK language to.\n",
+              "t": [
+                {
+                  "pT": "s"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "if the payment context cannot initialize or the locale cannot be set",
+              "e": "UnexpectedError"
+            }
+          ]
+        },
+        {
+          "n": "verifyBuyer",
+          "s": "Starts the **Strong Customer Authentication** flow to verify the identity of\nthe payment card holder.",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": {
+                "n": "Promise",
+                "ext": true,
+                "k": "c"
+              },
+              "cT": [
+                {
+                  "pT": "o",
+                  "ent": "VerifyBuyerResponseDetails"
+                },
+                {
+                  "pT": "o"
+                }
+              ]
+            }
+          ],
+          "p": [
+            {
+              "n": "source",
+              "d": "The nonce received from a tokenization call.",
+              "t": [
+                {
+                  "pT": "s"
+                }
+              ]
+            },
+            {
+              "n": "details",
+              "d": "Details about the buyer to help verify their identify.",
+              "t": [
+                {
+                  "pT": "o",
+                  "ent": "ChargeVerifyBuyerDetails"
+                },
+                {
+                  "pT": "o",
+                  "ent": "StoreVerifyBuyerDetails"
+                }
+              ]
+            }
+          ],
+          "er": [
+            {
+              "d": "Something went wrong trying to verify the buyer",
+              "e": "VerifyBuyerError"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "SetLocaleResult",
+      "s": "The result of calling `setLocale()` on the WebPaySDK payments instance.",
+      "k": "i",
+      "p": [
+        {
+          "n": "message",
+          "s": "A message that indicates the result of the setLocale call.",
+          "t": [
+            {
+              "pT": "s"
+            },
+            {
+              "pT": "u"
+            }
+          ],
+          "o": true
+        },
+        {
+          "n": "newLocale",
+          "s": "The new [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) locale string after\nWebPaySDK `setLocale()` was called.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "previousLocale",
+          "s": "The previous [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) locale string of\nthe WebPaySDK before `setLocale()` was called.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "ChargeVerifyBuyerDetails",
+      "ex": [
+        {
+          "c": "const verificationDetails = {\n  amount: '1.00',\n  currencyCode: 'GBP',\n  intent: 'CHARGE',\n  billingContact: {\n    addressLines: ['123 Main Street', 'Apartment 1'],\n    familyName: 'Doe',\n    givenName: 'John',\n    email: 'jondoe@gmail.com',\n    country: 'GB',\n    phone: '3214563987',\n    region: 'LND',\n    city: 'London',\n  },\n};",
+          "l": "javascript"
+        }
+      ],
+      "s": "The verification details parameter passed, to the `payments.verifyBuyer()` function, for cases in which the buyer is being charged.",
+      "k": "i",
+      "p": [
+        {
+          "n": "amount",
+          "s": " The total cost of the purchase as a string representation of a number.\n example value: `'1.00'`.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "billingContact",
+          "s": "The `Contact` information needed to help verify the buyer.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "Contact"
+            }
+          ]
+        },
+        {
+          "n": "currencyCode",
+          "s": " 3-letter ISO 4217 currency code.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "intent",
+          "s": " Transactional intent of the payment",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "CHARGE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "StoreVerifyBuyerDetails",
+      "ex": [
+        {
+          "c": "const verificationDetails = {\n  intent: 'STORE',\n  billingContact: {\n    addressLines: ['123 Main Street', 'Apartment 1'],\n    familyName: 'Doe',\n    givenName: 'John',\n    email: 'jondoe@gmail.com',\n    country: 'GB',\n    phone: '3214563987',\n    region: 'LND',\n    city: 'London',\n  },\n};",
+          "l": "javascript"
+        }
+      ],
+      "s": "The verification details parameter, passed to the `payments.verifyBuyer()` function, for cases in which the card is being stored on file.",
+      "k": "i",
+      "p": [
+        {
+          "n": "billingContact",
+          "s": "The `Contact` information needed to help verify the buyer.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "Contact"
+            }
+          ]
+        },
+        {
+          "n": "intent",
+          "s": " Transactional intent of the payment",
+          "t": [
+            {
+              "pT": "s",
+              "pV": "STORE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "VerifyBuyerResponseDetails",
+      "s": "Response details from the `await payments.verifyBuyer()` function.",
+      "k": "i",
+      "p": [
+        {
+          "n": "token",
+          "s": "The verification token that is passed to the Payments API.",
+          "t": [
+            {
+              "pT": "s"
+            }
+          ]
+        },
+        {
+          "n": "userChallenged",
+          "s": "Whether the buyer went through the Card Issuer's challenge flow to verify the buyer.",
+          "t": [
+            {
+              "pT": "b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Square",
+      "ex": [
+        {
+          "c": "<script type=\"text/javascript\" src=\"https://sandbox.web.squarecdn.com/v1/square.js\"></script>\n<script>\n  if (window.Square) {\n    const payments = Square.payments(applicationId, locationId);\n  }\n</script>",
+          "l": "javascript"
+        }
+      ],
+      "s": "The entry point of the Web Payments SDK.",
+      "k": "i",
+      "m": [
+        {
+          "n": "payments",
+          "ex": [
+            {
+              "c": "const APPLICATION_ID = 'Your application ID here';\nconst LOCATION_ID = 'Your location ID here';\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);",
+              "l": "javascript"
+            }
+          ],
+          "s": "The entry point to Square Payments. Use this method to configure your\napplicationId and locationId",
+          "d": "The `payments` object provides the factory functions used to\ncreate payment methods.\n",
+          "rT": [
+            {
+              "pT": "o",
+              "ent": "Payments"
+            }
+          ],
+          "p": [
+            {
+              "n": "applicationId",
+              "d": "The Application ID of your square developer application. This\ncan be found in your Square Developer Dashboard.",
+              "t": [
+                {
+                  "pT": "s"
+                }
+              ]
+            },
+            {
+              "n": "locationId",
+              "d": "The Location ID of the seller location where the payment is taken. This\ncan be found in your Square Developer Dashboard. This is required to accept Apple Pay,\nGoogle Pay, ACH, and Cash App payments.\n",
+              "t": [
+                {
+                  "pT": "s"
+                },
+                {
+                  "pT": "u"
+                }
+              ],
+              "o": true
+            }
+          ],
+          "er": [
+            {
+              "d": "The applicationID is invalid"
+            },
+            {
+              "d": "The applicationID does not\nmatch the environment (sandbox/prod)"
+            },
+            {
+              "d": "The browser is not supported",
+              "e": "BrowserNotSupportedError"
+            }
+          ]
+        }
+      ],
+      "p": [
+        {
+          "n": "errors",
+          "s": "An array of programmatically handleable error types for ease of matching\nusing instanceof",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "PublicErrors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "BaseVerifyBuyerDetails",
+      "k": "i",
+      "p": [
+        {
+          "n": "billingContact",
+          "s": "The `Contact` information needed to help verify the buyer.",
+          "t": [
+            {
+              "pT": "o",
+              "ent": "Contact"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enu": [
+    {
+      "n": "CurrencyCode",
+      "s": "Three-letter ISO 4217 currency code for the payment.",
+      "d": "This enum is an example and not exhaustive, refer to the ISO standard for a complete listing\n",
+      "v": [
+        {
+          "n": "GBP",
+          "v": "\"GBP\""
+        },
+        {
+          "n": "USD",
+          "v": "\"USD\""
+        }
+      ]
+    },
+    {
+      "n": "CardBrand",
+      "s": "Enumerates the payment card brands accepted by the Web Payments SDK",
+      "v": [
+        {
+          "n": "AMERICAN_EXPRESS",
+          "s": "American Express",
+          "v": "\"American Express\""
+        },
+        {
+          "n": "DINERS_CLUB",
+          "s": "Diners Club card",
+          "v": "\"Diners Club\""
+        },
+        {
+          "n": "DISCOVER",
+          "s": "Discover card",
+          "v": "\"Discover\""
+        },
+        {
+          "n": "JCB",
+          "s": "Japan Credit Bureau (JCB) card",
+          "v": "\"JCB\""
+        },
+        {
+          "n": "MASTERCARD",
+          "s": "Mastercard",
+          "v": "\"Mastercard\""
+        },
+        {
+          "n": "UNION_PAY",
+          "s": "UnionPay card",
+          "v": "\"UnionPay\""
+        },
+        {
+          "n": "UNKNOWN",
+          "s": "Unknown payment card brand",
+          "v": "\"Unknown\""
+        },
+        {
+          "n": "VISA",
+          "s": "Visa card",
+          "v": "\"Visa\""
+        }
+      ]
+    },
+    {
+      "n": "CardType",
+      "s": "Enum representation of whether a card is a Credit or Debit card, or unknown type if its type cannot be determined.",
+      "v": [
+        {
+          "n": "CREDIT",
+          "s": "Credit card",
+          "v": "\"CREDIT\""
+        },
+        {
+          "n": "DEBIT",
+          "s": "Debit card",
+          "v": "\"DEBIT\""
+        },
+        {
+          "n": "UNKNOWN_CARD_TYPE",
+          "s": "Unknown payment card type",
+          "v": "\"UNKNOWN_CARD_TYPE\""
+        }
+      ]
+    },
+    {
+      "n": "PrepaidType",
+      "s": "Enum for describing whether the current card is a prepaid card",
+      "v": [
+        {
+          "n": "NOT_PREPAID",
+          "s": "Not prepaid debit card",
+          "v": "\"NOT_PREPAID\""
+        },
+        {
+          "n": "PREPAID",
+          "s": "Prepaid debit card",
+          "v": "\"PREPAID\""
+        },
+        {
+          "n": "UNKNOWN_PAYMENT_TYPE",
+          "s": "Unknown payment prepaid card type",
+          "v": "\"UNKNOWN_PREPAID_TYPE\""
+        }
+      ]
+    },
+    {
+      "n": "GiftCardType",
+      "s": "The types of Gift Cards accepted by the Web Payments SDK",
+      "v": [
+        {
+          "n": "GIFT",
+          "s": "Gift card",
+          "v": "\"Gift\""
+        }
+      ]
+    },
+    {
+      "n": "MethodType",
+      "s": "The payment methods accepted by the SDK",
+      "v": [
+        {
+          "n": "ACH",
+          "s": "Automated clearing house (ACH) bank transfer",
+          "v": "\"ACH\""
+        },
+        {
+          "n": "APPLE_PAY",
+          "s": "Apple Pay",
+          "v": "\"Apple Pay\""
+        },
+        {
+          "n": "CARD",
+          "s": "Credit or debit card",
+          "v": "\"Card\""
+        },
+        {
+          "n": "GIFT_CARD",
+          "s": "Gift Card",
+          "v": "\"Gift Card\""
+        },
+        {
+          "n": "GOOGLE_PAY",
+          "s": "Google Pay",
+          "v": "\"Google Pay\""
+        }
+      ]
+    },
+    {
+      "n": "TokenStatus",
+      "v": [
+        {
+          "n": "ABORT",
+          "s": "Indicates tokenization was aborted.",
+          "v": "\"Abort\""
+        },
+        {
+          "n": "CANCEL",
+          "s": "Indicates tokenization was cancelled by the user.",
+          "v": "\"Cancel\""
+        },
+        {
+          "n": "ERROR",
+          "s": "Indicates tokenization was not successful.",
+          "v": "\"Error\""
+        },
+        {
+          "n": "INVALID",
+          "s": "Indicated validation has failed during tokenization",
+          "v": "\"Invalid\""
+        },
+        {
+          "n": "OK",
+          "s": "Indicates tokenization was successful.",
+          "v": "\"OK\""
+        },
+        {
+          "n": "UNKNOWN",
+          "s": "Indicates an unknown tokenization status.",
+          "v": "\"Unknown\""
+        }
+      ]
+    },
+    {
+      "n": "PlaidEventName",
+      "s": "All possible Plaid Event Names",
+      "v": [
+        {
+          "n": "CLOSE_OAUTH",
+          "s": "The user closed the third-party website or mobile app without completing the OAuth flow.",
+          "v": "\"CLOSE_OAUTH\""
+        },
+        {
+          "n": "ERROR",
+          "s": "A recoverable error occurred in the Link flow, see the error_code metadata.",
+          "v": "\"ERROR\""
+        },
+        {
+          "n": "EXIT",
+          "s": "The user has exited without completing the Link flow and the onExit callback is fired.",
+          "v": "\"EXIT\""
+        },
+        {
+          "n": "FAIL_OAUTH",
+          "s": "The user encountered an error while completing the third-party's OAuth login flow.",
+          "v": "\"FAIL_OAUTH\""
+        },
+        {
+          "n": "HANDOFF",
+          "s": "The user has completed the Link flow and the onSuccess callback is fired.",
+          "v": "\"HANDOFF\""
+        },
+        {
+          "n": "MATCHED_SELECT_INSTITUTION",
+          "s": "The user selected an institution that was presented as a matched institution.",
+          "v": "\"MATCHED_SELECT_INSTITUTION\""
+        },
+        {
+          "n": "MATCHED_SELECT_VERIFY_METHOD",
+          "s": "The user selected a verification method for a matched institution.",
+          "v": "\"MATCHED_SELECT_VERIFY_METHOD\""
+        },
+        {
+          "n": "OPEN",
+          "s": "The user has opened Link.",
+          "v": "\"OPEN\""
+        },
+        {
+          "n": "OPEN_MY_PLAID",
+          "s": "The user has opened my.plaid.com. This event is only sent when Link is initialized with Assets as a product",
+          "v": "\"OPEN_MY_PLAID\""
+        },
+        {
+          "n": "OPEN_OAUTH",
+          "s": "The user has navigated to a third-party website or mobile app in order to complete the OAuth login flow.",
+          "v": "\"OPEN_OAUTH\""
+        },
+        {
+          "n": "SEARCH_INSTITUTION",
+          "s": "The user has searched for an institution.",
+          "v": "\"SEARCH_INSTITUTION\""
+        },
+        {
+          "n": "SELECT_BRAND",
+          "s": "The user selected a brand, e.g. Bank of America. The SELECT_BRAND event is only emitted for large financial institutions with multiple online banking portals.",
+          "v": "\"SELECT_BRAND\""
+        },
+        {
+          "n": "SELECT_INSTITUTION",
+          "s": "The user selected an institution.",
+          "v": "\"SELECT_INSTITUTION\""
+        },
+        {
+          "n": "SUBMIT_CREDENTIALS",
+          "s": "The user has submitted credentials.",
+          "v": "\"SUBMIT_CREDENTIALS\""
+        },
+        {
+          "n": "SUBMIT_MFA",
+          "s": "The user has submitted MFA.",
+          "v": "\"SUBMIT_MFA\""
+        },
+        {
+          "n": "TRANSITION_VIEW",
+          "s": "The user has moved from one view to the next",
+          "v": "\"TRANSITION_VIEW\""
+        }
+      ]
+    },
+    {
+      "n": "CardFieldNames",
+      "s": "The four input field names in the payment card input form",
+      "v": [
+        {
+          "n": "CARD_NUMBER",
+          "s": "Payment card number",
+          "v": "\"cardNumber\""
+        },
+        {
+          "n": "CVV",
+          "s": "Card verification value (cvv), 3-digit number on back of card",
+          "v": "\"cvv\""
+        },
+        {
+          "n": "EXPIRATION_DATE",
+          "s": "Payment card expiration date",
+          "v": "\"expirationDate\""
+        },
+        {
+          "n": "POSTAL_CODE",
+          "s": "Card holder postal code on file with card issuer",
+          "v": "\"postalCode\""
+        }
+      ]
+    },
+    {
+      "n": "CardInputEventTypes",
+      "s": "Input event types emitted from the Card and Fields payment method instances.",
+      "v": [
+        {
+          "n": "CARD_BRAND_CHANGED",
+          "s": "The payment form detected a new likely credit card brand based on the card number.",
+          "v": "\"cardBrandChanged\""
+        },
+        {
+          "n": "ERROR_CLASS_ADDED",
+          "s": "A form field has an invalid value, and the corresponding error CSS class was added to the element.",
+          "v": "\"errorClassAdded\""
+        },
+        {
+          "n": "ERROR_CLASS_REMOVED",
+          "s": "An invalid value on a form field was corrected, and the corresponding error CSS class was removed from the element.",
+          "v": "\"errorClassRemoved\""
+        },
+        {
+          "n": "ESCAPE",
+          "s": "The user pressed the \"Escape\" key while editing a field.",
+          "v": "\"escape\""
+        },
+        {
+          "n": "FOCUS_CLASS_ADDED",
+          "s": "A form field gained focus, and the corresponding focus CSS class was added to the element.",
+          "v": "\"focusClassAdded\""
+        },
+        {
+          "n": "FOCUS_CLASS_REMOVED",
+          "s": "A form field lost focus, and the corresponding focus CSS class was removed from the element.",
+          "v": "\"focusClassRemoved\""
+        },
+        {
+          "n": "POSTAL_CODE_CHANGED",
+          "s": "The current value of the postal code form field changed.",
+          "v": "\"postalCodeChanged\""
+        },
+        {
+          "n": "SUBMIT",
+          "s": "The user has triggered submission of the form by pressing \"Enter\" while editing a field.",
+          "v": "\"submit\""
+        }
+      ]
+    },
+    {
+      "n": "GiftCardBrand",
+      "s": "The brands accepted by the Web Payments SDK",
+      "v": [
+        {
+          "n": "UNKNOWN",
+          "s": "Unknown gift card brand",
+          "v": "\"Unknown\""
+        }
+      ]
+    },
+    {
+      "n": "GiftCardFieldNames",
+      "s": "The GiftCard field names on the GiftCard input form",
+      "v": [
+        {
+          "n": "GIFT_CARD_NUMBER",
+          "s": "gift card number",
+          "v": "\"giftCardNumber\""
+        }
+      ]
+    },
+    {
+      "n": "GooglePayAddressErrorReason",
+      "s": "Google Pay shipping address errors",
+      "v": [
+        {
+          "n": "PAYMENT_METHOD_DESTROYED",
+          "v": "\"PAYMENT_METHOD_DESTROYED\""
+        },
+        {
+          "n": "SHIPPING_ADDRESS_INVALID",
+          "s": "The shipping address is invalid",
+          "v": "\"SHIPPING_ADDRESS_INVALID\""
+        },
+        {
+          "n": "SHIPPING_ADDRESS_UNSERVICEABLE",
+          "s": "The shipping agent does not deliver to this area",
+          "v": "\"SHIPPING_ADDRESS_UNSERVICEABLE\""
+        }
+      ]
+    },
+    {
+      "n": "GooglePayButtonColor",
+      "s": "The background color of the Google Pay button",
+      "v": [
+        {
+          "n": "BLACK",
+          "s": "Black background",
+          "v": "\"black\""
+        },
+        {
+          "n": "DEFAULT",
+          "s": "Black background is set by default",
+          "v": "\"default\""
+        },
+        {
+          "n": "WHITE",
+          "s": "White background",
+          "v": "\"white\""
+        }
+      ]
+    },
+    {
+      "n": "GooglePayButtonSizeMode",
+      "s": "The sizing method used by the SDK to set the size of the Google Pay button\nwhen rendered",
+      "v": [
+        {
+          "n": "FILL",
+          "s": "Set rendered size to a percent of form size",
+          "v": "\"fill\""
+        },
+        {
+          "n": "STATIC",
+          "s": "Set rendered size to value set in code",
+          "v": "\"static\""
+        }
+      ]
+    },
+    {
+      "n": "GooglePayButtonType",
+      "s": "The Google Pay button width choices",
+      "v": [
+        {
+          "n": "LONG",
+          "s": "Render a long version of the Google Pay button",
+          "v": "\"long\""
+        },
+        {
+          "n": "SHORT",
+          "s": "Render the short version",
+          "v": "\"short\""
+        }
+      ]
+    },
+    {
+      "n": "PaymentRequestEvent",
+      "s": "The events that can be invoked on payment methods that take a PaymentRequest object",
+      "v": [
+        {
+          "n": "SHIPPING_CONTACT_CHANGED",
+          "s": "Occurs when the buyer chooses a shipping address.",
+          "d": "Subscribe to this event in order to update the payment request when the\nshipping address changes.\n\n```js\nreq.addEventListener('shippingcontactchanged', (contact) => {\n  const lineItems = [ ... ]\n  const total = { ... }\n  return { lineItems, total };\n})\n```\n",
+          "v": "\"shippingcontactchanged\""
+        },
+        {
+          "n": "SHIPPING_OPTION_CHANGED",
+          "s": "Occurs when the buyer chooses a shipping option.",
+          "d": "Subscribe to this event in order to update the payment request when the\nshipping option changes.\n\n```js\nreq.addEventListener('shippingoptionchanged', (option) => {\n  const lineItems = [ ... ]\n  const total = { ... }\n  return { lineItems, total };\n})\n```\n",
+          "v": "\"shippingoptionchanged\""
+        }
+      ]
+    }
+  ],
+  "nav": {
+    "i": [
+      {
+        "r": "primary",
+        "t": "internalLink",
+        "te": "Home",
+        "s": ""
+      },
+      {
+        "r": "primary",
+        "t": "internalLink",
+        "te": "Card payments",
+        "s": "card-payments"
+      },
+      {
+        "r": "primary",
+        "t": "internalLink",
+        "te": "ACH Bank transfer",
+        "s": "bank-payments"
+      },
+      {
+        "r": "primary",
+        "t": "section",
+        "te": "Digital wallets",
+        "sI": [
+          {
+            "r": "primary",
+            "t": "internalLink",
+            "te": "Apple Pay",
+            "s": "digital-wallets/apple-pay"
+          },
+          {
+            "r": "primary",
+            "t": "internalLink",
+            "te": "Google Pay",
+            "s": "digital-wallets/google-pay"
+          }
+        ]
+      },
+      {
+        "r": "primary",
+        "t": "internalLink",
+        "te": "Gift cards",
+        "s": "gift-cards"
+      },
+      {
+        "r": "primary",
+        "t": "divider"
+      },
+      {
+        "r": "footer",
+        "t": "internalLink",
+        "te": "Objects & Enums",
+        "s": "objects"
+      },
+      {
+        "r": "footer",
+        "t": "internalLink",
+        "te": "Errors",
+        "s": "errors"
+      }
+    ]
+  },
+  "p": [
+    {
+      "t": "ACH Bank Transfer",
+      "s": "bank-payments",
+      "c": "### Usage\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the Square Payments object\n\nInitialize the Square [Payments](/reference/sdks/web/payments/objects/Payments) object with your application ID and the ID of the seller location where the payment is taken.\n\n```javascript\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create an ACH object\n\nGet a new [ACH](/reference/sdks/web/payments/objects/ACH) instance with all of the behaviors\nand properties needed to take the payment.\n\n```javascript\nconst ach = await payments.ach();\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Get the one-time payment token from the ACH object\n\nGet the payment token from the [ACH](/reference/sdks/web/payments/objects/ACH) object when the\nbuyer completes the form. Calling ach.tokenize will trigger a\nmodal whereby the buyer will be able to select their bank account.\nThe [tokenize](/reference/sdks/web/payments/objects/ACH#ACH.tokenize) method accepts the account holder's name as a required argument.\n\n```javascript\nthis.elements.token.value = await ach.tokenize({\n  accountHolderName: 'John Doe',\n});\n```\n\nIf the buyer's bank information is valid, `ach.tokenize()` will return a one-time\nuse token to make a call to the Payments API [CreatePayment](https://developer.squareup.com/reference/square/payments-api/create-payment) endpoint to charge a customer. Otherwise, it will return an\nerror you can present to the customer.\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sub": "PaymentMethod: ach",
+      "sum": "Take a bank account payment via ACH Bank Transfer",
+      "fEnt": "Payments",
+      "fMet": "ach",
+      "fEx": {
+        "c": "<!-- Renders the \"Connect Bank Account\" button -->\n<form>\n  <button id=\"ach-button\" type=\"button\">Pay with Bank Account</button>\n</form>\n<!-- Configure the Web Payments SDK and the ACH payment method -->\n<script type=\"text/javascript\">\n  async function main() {\n    const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n    const ach = await payments.ach();\n\n    async function eventHandler(event) {\n      event.preventDefault();\n\n      try {\n        const result = await ach.tokenize({\n          accountHolderName: 'John Doe',\n        });\n\n        if (result.status === 'OK') {\n          console.log(`Payment token is ${result.token}`);\n        }\n      } catch (e) {\n        console.error(e);\n      }\n    };\n\n    const achButton = document.getElementById('ach-button');\n    achButton.addEventListener('click', eventHandler);\n  }\n\n  main();\n</script>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    },
+    {
+      "t": "Card Payments",
+      "s": "card-payments",
+      "c": "### Usage\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the Square payments object\n\nInitialize the Square [Payments](/reference/sdks/web/payments/objects/Payments) object with your application ID and the ID of the seller location where the payment is taken.\n\n```javascript\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Get a new Card object\n\n```javascript\nconst card = await payments.card();\n```\n\nThis creates a new [Card](/reference/sdks/web/payments/objects/Card) instance with all of the behaviors\nand properties needed to take a card payment.\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Attach the Card instance to a DOM element\n\nAttach the [Card](/reference/sdks/web/payments/objects/Card) instance to an empty DOM element\non your page. The payment card form renders into the\nempty element, turning it into a secure payment card form.\n\n```javascript\nawait card.attach('#card');\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Get the payment token\n\nGet the payment form token from the [Card](/reference/sdks/web/payments/objects/Card) instance when the\nbuyer completes the form by calling the [tokenize](/reference/sdks/web/payments/objects/Card#Card.tokenize) method.\n\n```javascript\nconst tokenResult = await card.tokenize();\nif (tokenResult.status === 'OK') {\n  const token = tokenResult.token;\n} else {\n  console.error(tokenResult.errors);\n}\n```\n\nIf the payment card information is valid, it returns a one-time-use\ntoken which you can use to create a Payment using the Payments API [CreatePayment](https://developer.squareup.com/reference/square/payments-api/create-payment) endpoint to charge a customer. Otherwise, it will return an\nerror that you can present to the customer.\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sub": "PaymentMethod: card",
+      "sum": "The Square card element makes it easy to accept payments and collect card data on your site. With minimal lines of code you can generate a secure card form that once submitted, generates a one-time-use token that can be used to create a Payment with the CreatePayment API.",
+      "fEnt": "Payments",
+      "fMet": "card",
+      "fEx": {
+        "c": "<!-- Provide a target element for the Card form -->\n<form id=\"payment-form\">\n  <div id=\"card-container\"></div>\n  <button id=\"card-button\" type=\"button\">Pay</button>\n</form>\n<!-- Configure the Web Payments SDK and Card payment method -->\n<script type=\"text/javascript\">\n  async function main() {\n    const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n    const card = await payments.card();\n    await card.attach('#card-container');\n\n    async function eventHandler(event) {\n      event.preventDefault();\n\n      try {\n        const result = await card.tokenize();\n        if (result.status === 'OK') {\n          console.log(`Payment token is ${result.token}`);\n        }\n      } catch (e) {\n        console.error(e);\n      }\n    };\n\n    const cardButton = document.getElementById('card-button');\n    cardButton.addEventListener('click', eventHandler);\n  }\n\n  main();\n</script>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    },
+    {
+      "t": "Gift cards",
+      "s": "gift-cards",
+      "c": "### Usage\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the Square Payments object\n\nInitialize the Square [Payments](/reference/sdks/web/payments/objects/Payments) object with your application ID and the ID of the seller location where the payment is taken.\n\n```javascript\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create a GiftCard object\n\n```javascript\nconst giftCard = await payments.giftCard();\n```\n\nThis creates a new [GiftCard](/reference/sdks/web/payments/objects/GiftCard) instance with all of the behaviors\nand properties needed to take a Gift Card payment.\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Attach the GiftCard object to your page\n\nAttach the [GiftCard](/reference/sdks/web/payments/objects/GiftCard) object to an empty DOM element\non your page. The Gift Card form renders into the\nempty element, turning it into a secure gift card form.\n\n```javascript\nawait giftCard.attach('#gift-card');\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Get the one-time payment token from the GiftCard object\n\nGet the payment token from the `GiftCard` object when the\nbuyer completes the form by calling the [tokenize](/reference/sdks/web/payments/objects/GiftCard#GiftCard.tokenize) method.\n\n```javascript\nthis.elements.token.value = await giftCard.tokenize();\n```\n\nIf the Gift Card information is valid, it returns a one-time\nuse token to make a call to the Payments API [CreatePayment](https://developer.squareup.com/reference/square/payments-api/create-payment) endpoint to charge a customer. Otherwise, it will return an\nerror that you can present to the customer.\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sub": "PaymentMethod: giftCard",
+      "sum": "Take a Gift Card payment",
+      "fEnt": "Payments",
+      "fMet": "giftCard",
+      "fEx": {
+        "c": "<!-- Provide a target element for the Card form -->\n<form>\n  <div id=\"gift-card-container\"></div>\n  <button id=\"gift-card-button\" type=\"button\">Pay with Gift Card</button>\n</form>\n<!-- Configure the Web Payments SDK and Gift Card payment method -->\n<script type=\"text/javascript\">\n  async function main() {\n    const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n    const giftCard = await payments.giftCard();\n    await giftCard.attach('#gift-card');\n\n    async function eventHandler(event) {\n      event.preventDefault();\n\n      try {\n        const result = await giftCard.tokenize();\n        if (result.status === 'OK') {\n          console.log(`Payment token is ${result.token}`);\n        }\n      } catch (e) {\n        console.error(e);\n      }\n    };\n\n    const giftCardButton = document.getElementById('gift-card-button');\n    giftCardButton.addEventListener('submit', eventHandler);\n  }\n\n  main();\n</script>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    },
+    {
+      "t": "Web Payments SDK",
+      "s": "/",
+      "c": "### Quick Setup\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the SDK\n\nAdd the following script to the `<head>` of your index.html page, this will setup the SDK in testing a sanbox enviroment. Remove sandbox. from the URL when developing for production.\n\n```javascript\n<script src=\"https://sandbox.web.squarecdn.com/v1/square.js\"></script>\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Choose a payment method\n\nThe [Payments](/reference/sdks/web/payments/objects/Payments) object provides factory methods for the payment methods. To complete a payment scenario, see one of the following payment methods:\n\n- [Card Payments](/reference/sdks/web/payments/card-payments)\n- [ACH Payments](/reference/sdks/web/payments/bank-payments)\n- [Apple Pay](/reference/sdks/web/payments/digital-wallets/apple-pay)\n- [Google Pay](/reference/sdks/web/payments/digital-wallets/google-pay)\n- [Square Gift Card](/reference/sdks/web/payments/gift-cards)\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sum": "The Web Payments SDK lets you easily create PCI-compliant inputs to accept payments online with the Square Payments API. It supports the following payment methods: credit and debit cards, ACH bank transfers, Apple Pay, Google Pay, and Gift Cards.",
+      "fEnt": "Payments",
+      "fEx": {
+        "c": "<head>\n  <!-- 1: References the Square payment library to initalize the SDK -->\n  <script src=\"https://sandbox.web.squarecdn.com/v1/square.js\"></script>\n</head>\n<body>\n  <form id=\"payment-form\">\n    <div id=\"card-container\"></div>\n    <button id=\"card-button\" type=\"button\">Pay</button>\n  </form>\n  <!-- Configure the Web Payments SDK and Card payment method -->\n  <script type=\"text/javascript\">\n    async function main() {\n      const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n      const card = await payments.card();\n      await card.attach('#card-container');\n\n      async function eventHandler(event) {\n        event.preventDefault();\n\n        try {\n          const result = await card.tokenize();\n          if (result.status === 'OK') {\n            console.log(`Payment token is ${result.token}`);\n          }\n        } catch (e) {\n          console.error(e);\n        }\n      };\n\n      const cardButton = document.getElementById('card-button');\n      cardButton.addEventListener('click', eventHandler);\n    }\n\n    main();\n  </script>\n</body>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    },
+    {
+      "t": "Apple Pay",
+      "s": "digital-wallets/apple-pay",
+      "c": "### Usage\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the Square Payments object\n\nInitialize the Square [Payments](/reference/sdks/web/payments/objects/Payments) object with your application ID and the ID of the seller location where the payment is taken.\n\n```javascript\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create a PaymentRequest with the total amount\n\nCreate a new [PaymentRequest](/reference/sdks/web/payments/objects/PaymentRequest) using the\ndesired options. At the minimum, you need to provide the total amount,\nthe countryCode, and the currencyCode. **Note:** The amount\nfield is formatted for display, including decimal places. When creating a payment\nwith the [Payments API](https://developer.squareup.com/reference/square/payments-api/create-payment), the amount must be formatted as the payment amount in the\nsmallest unit of currency. For example, $5.79 would be 579 cents.\n\n```javascript\nconst request = payments.paymentRequest({\n  countryCode: 'US',\n  currencyCode: 'USD',\n  total: { amount: '5.79', label: 'Total' },\n});\n```\n\nThe [PaymentRequest](/reference/sdks/web/payments/objects/PaymentRequest) is created by\nthe SDK with payment request options that your application\nprovides in a [paymentRequestOptions](/reference/sdks/web/payments/objects/PaymentRequestOptions)\nobject that you declare.\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create an ApplePay object\n\nGet a new ApplePay object with your [PaymentRequest](/reference/sdks/web/payments/objects/PaymentRequest).\n\n```javascript\nconst applePay = await payments.applePay(request);\n```\n\nThis creates a new [ApplePay](/reference/sdks/web/payments/objects/ApplePay) instance with all of the behaviors and properties needed to take an Apple Pay payment.\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Get the one-time payment token from the ApplePay object\n\nGet the payment token from the [ApplePay](/reference/sdks/web/payments/objects/ApplePay) object when the\nbuyer completes the form by calling the [tokenize](/reference/sdks/web/payments/objects/ApplePay#ApplePay.tokenize) method.\n\n```javascript\nconst tokenResult = await applePay.tokenize();\nif (tokenResult.status === 'OK') {\n  const token = tokenResult.token;\n} else {\n  console.error(tokenResult.errors);\n}\n```\n\nIf the Apple Pay information is valid, the tokenResult will include an `'OK'`,\nstatus as well as a one-time-use token which can be used to make a call to the Payments API [CreatePayment](https://developer.squareup.com/reference/square/payments-api/create-payment) endpoint to charge a customer.\nIf the Apple Pay information is not valid, it will return an error that you can present to the customer.\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sub": "PaymentMethod: applePay",
+      "sum": "Take an Apple Pay payment",
+      "fEnt": "Payments",
+      "fMet": "applePay",
+      "fEx": {
+        "c": "<!-- Renders the Apple Pay button -->\n<form>\n  <button id=\"apple-pay-button\"></button>\n</form>\n<!-- Configure the WebSDK -->\n<script type=\"text/javascript\">\n  async function main() {\n    const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n\n    const paymentRequest = payments.paymentRequest({\n      countryCode: 'US',\n      currencyCode: 'USD',\n      total: {\n        amount: '1.00',\n        label: 'Total',\n      },\n    });\n\n    const applePay = await payments.applePay(paymentRequest);\n\n    async function eventHandler(event) {\n      event.preventDefault();\n\n      try {\n        const result = await applePay.tokenize();\n        if (result.status === 'OK') {\n          console.log(`Payment token is ${result.token}`);\n        }\n      } catch (e) {\n        console.error(e);\n      }\n    };\n\n    const applePayButtonTarget = document.getElementById('apple-pay-button');\n    applePayButtonTarget.addEventListener('click', eventHandler);\n  }\n\n  main();\n</script>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    },
+    {
+      "t": "Google Pay",
+      "s": "digital-wallets/google-pay",
+      "c": "### Usage\n\n{{#usage-guide}}\n{{#usage-guide-step}}\n\n#### Initialize the Square Payments object\n\nInitialize the Square [Payments](/reference/sdks/web/payments/objects/Payments) object with your application ID and the ID of the seller location where the payment is taken.\n\n```javascript\nconst payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create a PaymentRequest with the total amount\n\nCreate a new [PaymentRequest](/reference/sdks/web/payments/objects/PaymentRequest) using the\ndesired options. At the minimum, you need to provide the total amount,\nthe countryCode, and the currencyCode. **Note:** The amount\nfield is formatted for display, including decimal places. When creating a payment\nwith the [Payments API](https://developer.squareup.com/reference/square/payments-api/create-payment), the amount must be formatted as the payment amount in the\nsmallest unit of currency. For example, $5.79 would be 579 cents.\n\n```javascript\nconst request = payments.paymentRequest({\n  countryCode: 'US',\n  currencyCode: 'USD',\n  total: {\n    amount: '5.79',\n    label: 'Total',\n  },\n});\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Create a GooglePay instance\n\nCreate a new `GooglePay` instance using your [PaymentRequest](/reference/sdks/web/payments/objects/PaymentRequest).\n\n```javascript\nconst googlePay = await payments.googlePay(request);\n```\n\nThis creates a new [GooglePay](/reference/sdks/web/payments/objects/GooglePay) instance with all of the behaviors\nand properties needed to take a Google Pay payment.\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Attach the GooglePay instance to the page\n\nAttach the `GooglePay` instance to an empty DOM element on your page. The Google Pay\nbutton renders into the empty element. You can also specify a number of\n[options](/reference/sdks/web/payments/objects/GooglePayButtonOptions) that determine the look of the button itself such as the button color, and the\nbutton type.\n\n```javascript\ngooglePay.attach('#googlePay', { buttonColor: 'default', buttonType: 'long' });\n```\n\n{{/usage-guide-step}}\n{{#usage-guide-step}}\n\n#### Trigger the Google Pay payment sheet and receive a payment token\n\nTrigger the Google Pay payment sheet and receive a payment token from the [GooglePay](/reference/sdks/web/payments/objects/GooglePay)\ninstance when the buyer completes their interaction by calling the\n[tokenize](/reference/sdks/web/payments/objects/GooglePay#GooglePay.tokenize) method. This method returns a promise which resolves with a [TokenResult](/reference/sdks/web/payments/objects/TokenResult).\n\n```javascript\nconst tokenResult = await googlePay.tokenize();\nif (tokenResult.status === 'OK') {\n  const token = tokenResult.token;\n} else {\n  console.error(tokenResult.errors);\n}\n```\n\nIf the Google Pay information is valid, the tokenResult will include an `'OK'`,\nstatus as well as a one-time-use token which can be used as the `source_id` when making a call to the Payments API [CreatePayment](https://developer.squareup.com/reference/square/payments-api/create-payment) endpoint to charge a customer.\nIf the Google Pay information is not valid, it will return an error that you can present to the customer.\n\n{{/usage-guide-step}}\n{{/usage-guide}}\n",
+      "sub": "PaymentMethod: googlePay",
+      "sum": "Take a Google Pay payment",
+      "fEnt": "Payments",
+      "fMet": "googlePay",
+      "fEx": {
+        "c": "<!-- Provide a target element for the Google Pay button -->\n<form>\n  <div id=\"google-pay-button\"></div>\n</form>\n<!-- Configure the Web Payments SDK and Google Pay -->\n<script type=\"text/javascript\">\n  async function main() {\n    const payments = Square.payments(APPLICATION_ID, LOCATION_ID);\n\n    const paymentRequest = payments.paymentRequest({\n      countryCode: 'US',\n      currencyCode: 'USD',\n      total: {\n        amount: '1.00',\n        label: 'Total',\n      },\n    });\n\n    const googlePay = await payments.googlePay(paymentRequest);\n    await googlePay.attach('#google-pay-button');\n\n    async function eventHandler(event) {\n      event.preventDefault();\n\n      try {\n        const result = await googlePay.tokenize();\n        if (result.status === 'OK') {\n          console.log(`Payment token is ${result.token}`);\n        }\n      } catch (e) {\n        console.error(e);\n      }\n    };\n\n    const googlePayButtonTarget = document.getElementById('google-pay-button');\n    googlePayButtonTarget.addEventListener('click', eventHandler);\n  }\n\n  main();\n</script>\n",
+        "l": "html",
+        "n": "index.html"
+      }
+    }
+  ]
+}
