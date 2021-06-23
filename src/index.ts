@@ -3,7 +3,7 @@
  * @author junbao <junbao@mymoement.com>
  */
 
-import '../square';
+///<reference path="../square.d.ts"/>
 
 export const SQUARE_JS_URL_SANDBOX = 'https://sandbox.web.squarecdn.com/v1/square.js';
 
