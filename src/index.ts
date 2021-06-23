@@ -10,6 +10,8 @@ export const SQUARE_JS_URL_SANDBOX = 'https://sandbox.web.squarecdn.com/v1/squar
 
 export const SQUARE_JS_URL_PRODUCTION = 'https://web.squarecdn.com/v1/square.js';
 
+export type { Square };
+
 let squarePromise: Promise<Square> | undefined;
 
 // square injected
